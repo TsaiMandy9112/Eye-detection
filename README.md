@@ -23,4 +23,4 @@ Sub-products will become more popular, so we hope this software can play an impo
 
 <img width="1103" alt="截圖 2024-09-16 下午4 56 34" src="https://github.com/user-attachments/assets/baac371c-f00f-4491-9b5a-71d64ca10b52">
 
-參考自 https://github.com/htyangs/Eyes-Protector/tree/main
+reference : https://github.com/htyangs/Eyes-Protector/tree/main
