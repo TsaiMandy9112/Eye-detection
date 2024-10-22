@@ -382,11 +382,11 @@ class Ui_MainWindow(object):
         self.login1_homebutton.setGeometry(QtCore.QRect(1060, 10, 31, 31))
         self.login1_homebutton.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("C:/Users/ryan9/Downloads/專題/0923周/home_photo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("home_photo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.login1_homebutton.setIcon(icon)
         self.login1_homebutton.setIconSize(QtCore.QSize(30,30))
         self.login1_homebutton.setObjectName("login1_homebutton")
-
+        
         self.stackedWidget.addWidget(self.page_2)
         self.page_3 = QtWidgets.QWidget()
         self.page_3.setObjectName("page_3")
@@ -497,22 +497,22 @@ class Ui_MainWindow(object):
         self.blink_num_1.setFont(font)
         self.blink_num_1.setObjectName("blink_num_1")
 
-        self.blink_num_th_1 = QtWidgets.QSpinBox(self.page_3)
-        self.blink_num_th_1.setEnabled(True)
-        self.blink_num_th_1.setGeometry(QtCore.QRect(980, 240, 61, 21))
+        self.blink_num_th_2 = QtWidgets.QSpinBox(self.page_3)
+        self.blink_num_th_2.setEnabled(True)
+        self.blink_num_th_2.setGeometry(QtCore.QRect(980, 240, 61, 21))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.blink_num_th_1.sizePolicy().hasHeightForWidth())
-        self.blink_num_th_1.setSizePolicy(sizePolicy)
-        self.blink_num_th_1.setMinimum(0)
-        self.blink_num_th_1.setMaximum(120)
-        self.blink_num_th_1.setSingleStep(1)
-        self.blink_num_th_1.setValue(self.blink_num_th.value())
+        sizePolicy.setHeightForWidth(self.blink_num_th_2.sizePolicy().hasHeightForWidth())
+        self.blink_num_th_2.setSizePolicy(sizePolicy)
+        self.blink_num_th_2.setMinimum(0)
+        self.blink_num_th_2.setMaximum(120)
+        self.blink_num_th_2.setSingleStep(1)
+        self.blink_num_th_2.setValue(self.blink_num_th.value())
         font = QtGui.QFont()
         font.setFamily("Arial")
-        self.blink_num_th_1.setFont(font)
-        self.blink_num_th_1.setObjectName("blink_num_th_1")
+        self.blink_num_th_2.setFont(font)
+        self.blink_num_th_2.setObjectName("blink_num_th_2")
 
         self.pushButton_sve = QtWidgets.QPushButton(self.page_3)
         self.pushButton_sve.setGeometry(QtCore.QRect(880, 280, 93, 28))
@@ -653,7 +653,7 @@ class Ui_MainWindow(object):
         self.login2_homebutton.setGeometry(QtCore.QRect(1060, 10, 31, 31))
         self.login2_homebutton.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("C:/Users/ryan9/Downloads/專題/0923周/home_photo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("home_photo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.login2_homebutton.setIcon(icon)
         self.login2_homebutton.setIconSize(QtCore.QSize(30,30))
         self.login2_homebutton.setObjectName("login2_homebutton")
@@ -728,7 +728,7 @@ class Ui_MainWindow(object):
         self.analysis_homebutton.setGeometry(QtCore.QRect(1060, 10, 31, 31))
         self.analysis_homebutton.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("C:/Users/ryan9/Downloads/專題/0923周/home_photo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("home_photo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.analysis_homebutton.setIcon(icon)
         self.analysis_homebutton.setIconSize(QtCore.QSize(30,30))
         self.analysis_homebutton.setObjectName("analysis_homebutton")
@@ -822,6 +822,14 @@ class Ui_MainWindow(object):
         self.line_token_input.setObjectName("line_token_input")
         self.line_token_input.setPlaceholderText("請複製貼上")
 
+        #超連結說明的
+        # 創建 QLabel 作為超連結
+        self.link_edit = QtWidgets.QLabel(self.page_5)
+        self.link_edit.setGeometry(QtCore.QRect(300, 115, 180, 16))
+        # 設置 QLabel 為超連結格式
+        self.link_edit.setText('<a href="https://drive.google.com/file/d/1x-pcbKEawdGpEtdDJnkO7-28H_URY7lm/view?usp=share_link">使用說明 (點擊我開啟PDF)</a>')
+        self.link_edit.setOpenExternalLinks(True)  # 允許點擊後在外部瀏覽器中打開連結
+
         #「虛線7」
         self.line_7 = QtWidgets.QFrame(self.page_5)
         self.line_7.setGeometry(QtCore.QRect(30, 170, 441, 20))
@@ -831,7 +839,7 @@ class Ui_MainWindow(object):
 
         #「右眼」標籤
         self.right_eye_label = QtWidgets.QLabel(self.page_5)
-        self.right_eye_label.setGeometry(QtCore.QRect(40, 235, 81, 16))
+        self.right_eye_label.setGeometry(QtCore.QRect(290, 235, 81, 16))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.right_eye_label.setFont(font)
@@ -839,12 +847,12 @@ class Ui_MainWindow(object):
 
         #「右眼」遠視按鈕
         self.right_eye_out_button = QtWidgets.QRadioButton(self.page_5)
-        self.right_eye_out_button.setGeometry(QtCore.QRect(85, 225, 51, 20))
+        self.right_eye_out_button.setGeometry(QtCore.QRect(330, 225, 51, 20))
         self.right_eye_out_button.setObjectName("right_eye_out_button")
 
         #「右眼」近視按鈕
         self.right_eye_in_button = QtWidgets.QRadioButton(self.page_5)
-        self.right_eye_in_button.setGeometry(QtCore.QRect(85, 205, 51, 20))
+        self.right_eye_in_button.setGeometry(QtCore.QRect(330, 205, 51, 20))
         self.right_eye_in_button.setObjectName("right_eye_in_button")
 
         # 「右眼」近遠視總按鈕
@@ -854,14 +862,14 @@ class Ui_MainWindow(object):
 
         #「右眼度數」輸入匡
         self.right_eye_degree_input = QtWidgets.QLineEdit(self.page_5)
-        self.right_eye_degree_input.setGeometry(QtCore.QRect(145, 215, 71, 20))
+        self.right_eye_degree_input.setGeometry(QtCore.QRect(390, 215, 71, 20))
         self.right_eye_degree_input.setObjectName("right_eye_degree_input")
         self.right_eye_degree_input.setPlaceholderText("範例：200")
 
         #「右眼」閃光按鈕
         #還是有放按鈕鍵！如果按到無法取消，直接輸入0即可（預設也是0）
         self.right_eye_shine_button = QtWidgets.QRadioButton(self.page_5)
-        self.right_eye_shine_button.setGeometry(QtCore.QRect(85, 265, 51, 20))
+        self.right_eye_shine_button.setGeometry(QtCore.QRect(330, 265, 51, 20))
         self.right_eye_shine_button.setObjectName("right_eye_shine_button")
 
         # 「右眼」閃光總按鈕
@@ -870,13 +878,13 @@ class Ui_MainWindow(object):
 
         #「右眼閃光」輸入匡
         self.right_eye_shine_input = QtWidgets.QLineEdit(self.page_5)
-        self.right_eye_shine_input.setGeometry(QtCore.QRect(145, 265, 71, 20))
+        self.right_eye_shine_input.setGeometry(QtCore.QRect(390, 265, 71, 20))
         self.right_eye_shine_input.setObjectName("right_eye_shine_input")
         self.right_eye_shine_input.setPlaceholderText("若無請填0")
 
         #「左眼」標籤
         self.left_eye_label = QtWidgets.QLabel(self.page_5)
-        self.left_eye_label.setGeometry(QtCore.QRect(290, 235, 81, 16))
+        self.left_eye_label.setGeometry(QtCore.QRect(40, 235, 81, 16))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.left_eye_label.setFont(font)
@@ -884,24 +892,24 @@ class Ui_MainWindow(object):
 
         #「左眼」遠視按鈕
         self.left_eye_out_button = QtWidgets.QRadioButton(self.page_5)
-        self.left_eye_out_button.setGeometry(QtCore.QRect(330, 225, 51, 20))
+        self.left_eye_out_button.setGeometry(QtCore.QRect(85, 225, 51, 20))
         self.left_eye_out_button.setObjectName("left_eye_out_button")
 
         #「左眼閃光」輸入匡
         self.left_eye_shine_input = QtWidgets.QLineEdit(self.page_5)
-        self.left_eye_shine_input.setGeometry(QtCore.QRect(390, 265, 71, 20))
+        self.left_eye_shine_input.setGeometry(QtCore.QRect(145, 265, 71, 20))
         self.left_eye_shine_input.setObjectName("left_eye_shine_input")
         self.left_eye_shine_input.setPlaceholderText("若無請填0")
 
         #「左眼度數」輸入匡
         self.left_eye_degree_input = QtWidgets.QLineEdit(self.page_5)
-        self.left_eye_degree_input.setGeometry(QtCore.QRect(390, 215, 71, 20))
+        self.left_eye_degree_input.setGeometry(QtCore.QRect(145, 215, 71, 20))
         self.left_eye_degree_input.setObjectName("left_eye_degree_input")
         self.left_eye_degree_input.setPlaceholderText("範例：200")
 
         #「左眼」近視按鈕
         self.left_eye_in_button = QtWidgets.QRadioButton(self.page_5)
-        self.left_eye_in_button.setGeometry(QtCore.QRect(330, 205, 51, 20))
+        self.left_eye_in_button.setGeometry(QtCore.QRect(85, 205, 51, 20))
         self.left_eye_in_button.setObjectName("left_eye_in_button")
 
         #「左眼」近遠視總按鈕
@@ -911,26 +919,110 @@ class Ui_MainWindow(object):
 
         #「左眼」閃光按鈕
         self.left_eye_shine_button = QtWidgets.QRadioButton(self.page_5)
-        self.left_eye_shine_button.setGeometry(QtCore.QRect(330, 265, 51, 20))
+        self.left_eye_shine_button.setGeometry(QtCore.QRect(85, 265, 51, 20))
         self.left_eye_shine_button.setObjectName("left_eye_shine_button")
 
         # 「左眼」閃光總按鈕
         self.left_eye_shine_group = QtWidgets.QButtonGroup(self.page_5)
         self.left_eye_shine_group.addButton(self.left_eye_shine_button)
 
-        #「用眼狀況問題1」滑桿
-        self.eye_situation_slider1 = QtWidgets.QSlider(self.page_5)
-        self.eye_situation_slider1.setGeometry(QtCore.QRect(310, 340, 161, 22))
-        self.eye_situation_slider1.setOrientation(QtCore.Qt.Horizontal)
-        self.eye_situation_slider1.setObjectName("eye_situation_slider1")
+        '''此處五個為「眼睛用眼狀況」(左下角那一坨)'''
 
-        #「用眼狀況問題1」標籤
+        # 配戴眼鏡的頻率（用眼狀況問題1）標籤
         self.eye_situation_label1 = QtWidgets.QLabel(self.page_5)
         self.eye_situation_label1.setGeometry(QtCore.QRect(40, 340, 261, 16))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.eye_situation_label1.setFont(font)
-        self.eye_situation_label1.setObjectName("eye_situation_label1")
+        self.eye_situation_label1.setObjectName("eye_situation_label1")   
+        # 配戴隱眼的頻率（用眼狀況問題2）標籤
+        self.eye_situation_label2 = QtWidgets.QLabel(self.page_5)
+        self.eye_situation_label2.setGeometry(QtCore.QRect(40, 380, 261, 16))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.eye_situation_label2.setFont(font)
+        self.eye_situation_label2.setObjectName("eye_situation_label2")
+        # 眼睛乾澀頻率（用眼狀況問題3）標籤
+        self.eye_situation_label3 = QtWidgets.QLabel(self.page_5)
+        self.eye_situation_label3.setGeometry(QtCore.QRect(40, 420, 261, 16))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.eye_situation_label3.setFont(font)
+        self.eye_situation_label3.setObjectName("eye_situation_label3")
+        # 頭痛暈眩頻率（用眼狀況問題4）標籤
+        self.eye_situation_label4 = QtWidgets.QLabel(self.page_5)
+        self.eye_situation_label4.setGeometry(QtCore.QRect(40, 460, 261, 16))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.eye_situation_label4.setFont(font)
+        self.eye_situation_label4.setObjectName("eye_situation_label4")
+        # 眼睛疲勞頻率（用眼狀況問題5）標籤
+        self.eye_situation_label5 = QtWidgets.QLabel(self.page_5)
+        self.eye_situation_label5.setGeometry(QtCore.QRect(40, 500, 261, 16))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.eye_situation_label5.setFont(font)
+        self.eye_situation_label5.setObjectName("eye_situation_label5")
+        
+        #點擊程度的上排數字標籤（1到10那個）
+        self.eye_situation_upnumber_label = QtWidgets.QLabel(self.page_5)
+        self.eye_situation_upnumber_label.setGeometry(QtCore.QRect(305, 327, 200, 15))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.eye_situation_upnumber_label.setFont(font)
+        self.eye_situation_upnumber_label.setObjectName("eye_situation_upnumber_label")
+             
+        # 創建 QButtonGroup 並將按鈕加入組
+        self.eye_situation_button_group1 = QtWidgets.QButtonGroup(self.page_5)# 配戴眼鏡的頻率
+        self.eye_situation_button_group2 = QtWidgets.QButtonGroup(self.page_5)# 配戴隱眼的頻率
+        self.eye_situation_button_group3 = QtWidgets.QButtonGroup(self.page_5)# 眼睛乾澀頻率
+        self.eye_situation_button_group4 = QtWidgets.QButtonGroup(self.page_5)# 頭痛暈眩頻率
+        self.eye_situation_button_group5 = QtWidgets.QButtonGroup(self.page_5)# 眼睛疲勞頻率
+        # 根據提供的 x 座標生成 QRadioButton
+        self.temp_button1 = []  
+        self.temp_button2 = []  
+        self.temp_button3 = []  
+        self.temp_button4 = []  
+        self.temp_button5 = []  
+        x_positions = [300, 319, 338, 357, 377, 397, 416, 437, 458, 480]  
+        y_position1 = 340  
+        y_position2 = 380  
+        y_position3 = 420 
+        y_position4 = 460
+        y_position5 = 500
+        for i, x in enumerate(x_positions, 1):  # 根據 x_positions 的位置來生成按鈕
+            eye_situation_button1 = QtWidgets.QRadioButton(self.page_5)
+            eye_situation_button1.setGeometry(QtCore.QRect(x, y_position1, 161, 22))
+            eye_situation_button1.setObjectName(f"self.eye_situation_button1_{i}")
+            self.temp_button1.append(eye_situation_button1)
+            self.eye_situation_button_group1.addButton(eye_situation_button1,i)  # 將按鈕加入到 ButtonGroup
+        for button in self.temp_button1:
+            print(button.objectName())
+        for i, x in enumerate(x_positions, 1):  
+            eye_situation_button2 = QtWidgets.QRadioButton(self.page_5)
+            eye_situation_button2.setGeometry(QtCore.QRect(x, y_position2, 161, 22))
+            eye_situation_button2.setObjectName(f"eye_situation_button2_{i}")
+            self.temp_button2.append(eye_situation_button2)
+            self.eye_situation_button_group2.addButton(eye_situation_button2,i)  
+        for i, x in enumerate(x_positions, 1):  
+            eye_situation_button3 = QtWidgets.QRadioButton(self.page_5)
+            eye_situation_button3.setGeometry(QtCore.QRect(x, y_position3, 161, 22))
+            eye_situation_button3.setObjectName(f"eye_situation_button3_{i}")
+            self.temp_button3.append(eye_situation_button3)
+            self.eye_situation_button_group3.addButton(eye_situation_button3,i)  
+        for i, x in enumerate(x_positions, 1):  
+            eye_situation_button4 = QtWidgets.QRadioButton(self.page_5)
+            eye_situation_button4.setGeometry(QtCore.QRect(x, y_position4, 161, 22))
+            eye_situation_button4.setObjectName(f"eye_situation_button4_{i}")
+            self.temp_button4.append(eye_situation_button4)
+            self.eye_situation_button_group4.addButton(eye_situation_button4,i) 
+        for i, x in enumerate(x_positions, 1):  
+            eye_situation_button5 = QtWidgets.QRadioButton(self.page_5)
+            eye_situation_button5.setGeometry(QtCore.QRect(x, y_position5, 161, 22))
+            eye_situation_button5.setObjectName(f"eye_situation_button5_{i}")
+            self.temp_button5.append(eye_situation_button5)
+            self.eye_situation_button_group5.addButton(eye_situation_button5,i) 
+
 
         #
         self.line_8 = QtWidgets.QFrame(self.page_5)
@@ -939,84 +1031,13 @@ class Ui_MainWindow(object):
         self.line_8.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line_8.setObjectName("line_8")
 
-        #「用眼狀況問題2」滑桿
-        self.eye_situation_slider2 = QtWidgets.QSlider(self.page_5)
-        self.eye_situation_slider2.setGeometry(QtCore.QRect(310, 380, 161, 22))
-        self.eye_situation_slider2.setOrientation(QtCore.Qt.Horizontal)
-        self.eye_situation_slider2.setObjectName("eye_situation_slider2")
-
-        #「用眼狀況問題2」標籤
-        self.eye_situation_label2 = QtWidgets.QLabel(self.page_5)
-        self.eye_situation_label2.setGeometry(QtCore.QRect(40, 380, 261, 16))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.eye_situation_label2.setFont(font)
-        self.eye_situation_label2.setObjectName("eye_situation_label2")
-
-        #「用眼狀況問題3」滑桿(眼睛乾澀頻率：)
-        self.eye_situation_slider3 = QtWidgets.QSlider(self.page_5)
-        self.eye_situation_slider3.setGeometry(QtCore.QRect(310, 420, 161, 22))
-        self.eye_situation_slider3.setOrientation(QtCore.Qt.Horizontal)
-        self.eye_situation_slider3.setObjectName("eye_situation_slider3")
-
-        #「用眼狀況問題3」標籤(眼睛乾澀頻率：)
-        self.eye_situation_label3 = QtWidgets.QLabel(self.page_5)
-        self.eye_situation_label3.setGeometry(QtCore.QRect(40, 420, 261, 16))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.eye_situation_label3.setFont(font)
-        self.eye_situation_label3.setObjectName("eye_situation_slider3")
-
-        #「用眼狀況問題4」滑桿(頭痛暈眩頻率)
-        self.eye_situation_slider4 = QtWidgets.QSlider(self.page_5)
-        self.eye_situation_slider4.setGeometry(QtCore.QRect(310, 460, 161, 22))
-        self.eye_situation_slider4.setOrientation(QtCore.Qt.Horizontal)
-        self.eye_situation_slider4.setObjectName("eye_situation_slider4")
-
-        #「用眼狀況問題4」標籤(頭痛暈眩頻率)
-        self.eye_situation_label4 = QtWidgets.QLabel(self.page_5)
-        self.eye_situation_label4.setGeometry(QtCore.QRect(40, 460, 261, 16))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.eye_situation_label4.setFont(font)
-        self.eye_situation_label4.setObjectName("eye_situation_label4")
-
-        #「用眼狀況問題5」標籤
-        self.eye_situation_label5 = QtWidgets.QLabel(self.page_5)
-        self.eye_situation_label5.setGeometry(QtCore.QRect(40, 500, 261, 16))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.eye_situation_label5.setFont(font)
-        self.eye_situation_label5.setObjectName("eye_situation_label5")
-
-        #「用眼狀況問題5」滑桿
-        self.eye_situation_slider5 = QtWidgets.QSlider(self.page_5)
-        self.eye_situation_slider5.setGeometry(QtCore.QRect(310, 500, 161, 22))
-        self.eye_situation_slider5.setOrientation(QtCore.Qt.Horizontal)
-        self.eye_situation_slider5.setObjectName("eye_situation_slider5")
-
         #
         self.line_9 = QtWidgets.QFrame(self.page_5)
         self.line_9.setGeometry(QtCore.QRect(30, 540, 441, 20))
         self.line_9.setFrameShape(QtWidgets.QFrame.HLine)
         self.line_9.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line_9.setObjectName("line_9")
-
-        #「是否長時間使用電子產品」-yes按鈕
-        self.use_situation_yes_button1 = QtWidgets.QRadioButton(self.page_5)
-        self.use_situation_yes_button1.setGeometry(QtCore.QRect(870, 40, 51, 20))
-        self.use_situation_yes_button1.setObjectName("use_situation_yes_button1")
-
-        #「是否長時間使用電子產品」不，按鈕
-        self.use_situation_no_button1 = QtWidgets.QRadioButton(self.page_5)
-        self.use_situation_no_button1.setGeometry(QtCore.QRect(930, 40, 51, 20))
-        self.use_situation_no_button1.setObjectName("use_situation_no_button1")
-
-        #「是否長時間使用電子產品」總按鈕
-        self.use_situation1_group = QtWidgets.QButtonGroup(self.page_5)
-        self.use_situation1_group.addButton(self.use_situation_yes_button1)
-        self.use_situation1_group.addButton(self.use_situation_no_button1)
-
+        
         #「是否長時間使用電子產品」標籤
         self.use_situation_label1 = QtWidgets.QLabel(self.page_5)
         self.use_situation_label1.setGeometry(QtCore.QRect(560, 40, 301, 16))
@@ -1025,9 +1046,26 @@ class Ui_MainWindow(object):
         self.use_situation_label1.setFont(font)
         self.use_situation_label1.setObjectName("use_situation_label1")
 
+        #「是否長時間使用電子產品」-yes按鈕
+        self.use_situation_yes_button1 = QtWidgets.QRadioButton(self.page_5)
+        self.use_situation_yes_button1.setGeometry(QtCore.QRect(880, 40, 51, 20))
+        self.use_situation_yes_button1.setObjectName("use_situation_yes_button1")
+
+        #「是否長時間使用電子產品」不，按鈕
+        self.use_situation_no_button1 = QtWidgets.QRadioButton(self.page_5)
+        self.use_situation_no_button1.setGeometry(QtCore.QRect(940, 40, 51, 20))
+        self.use_situation_no_button1.setObjectName("use_situation_no_button1")
+
+        #「是否長時間使用電子產品」總按鈕
+        self.use_situation1_group = QtWidgets.QButtonGroup(self.page_5)
+        self.use_situation1_group.addButton(self.use_situation_yes_button1)
+        self.use_situation1_group.addButton(self.use_situation_no_button1)
+
+        
+
         #「使用設備時間」標籤
         self.use_situation_label2 = QtWidgets.QLabel(self.page_5)
-        self.use_situation_label2.setGeometry(QtCore.QRect(560, 80, 301, 16))
+        self.use_situation_label2.setGeometry(QtCore.QRect(560, 120, 301, 16)) 
         font = QtGui.QFont()
         font.setPointSize(14)
         self.use_situation_label2.setFont(font)
@@ -1035,7 +1073,7 @@ class Ui_MainWindow(object):
 
         #「使用設備時間」下拉式選單
         self.use_situation2_combobox = QtWidgets.QComboBox(self.page_5)
-        self.use_situation2_combobox.setGeometry(QtCore.QRect(867, 80, 104, 26))
+        self.use_situation2_combobox.setGeometry(QtCore.QRect(870, 120, 121, 26))
         self.use_situation2_combobox.setObjectName("use_situation2_combobox")
         self.use_situation2_combobox.addItem("")
         self.use_situation2_combobox.addItem("")
@@ -1045,7 +1083,7 @@ class Ui_MainWindow(object):
 
         #「防藍光設備」標籤
         self.use_situation_label3 = QtWidgets.QLabel(self.page_5)
-        self.use_situation_label3.setGeometry(QtCore.QRect(560, 120, 321, 16))
+        self.use_situation_label3.setGeometry(QtCore.QRect(560, 80, 321, 16)) 
         font = QtGui.QFont()
         font.setPointSize(14)
         self.use_situation_label3.setFont(font)
@@ -1053,12 +1091,12 @@ class Ui_MainWindow(object):
 
         #「防藍光設備」是，按鈕
         self.use_situation_yes_button3 = QtWidgets.QRadioButton(self.page_5)
-        self.use_situation_yes_button3.setGeometry(QtCore.QRect(870, 120, 51, 20))
+        self.use_situation_yes_button3.setGeometry(QtCore.QRect(880, 80, 51, 20))
         self.use_situation_yes_button3.setObjectName("use_situation_yes_button3")
 
         #「防藍光設備」不，按鈕
         self.use_situation_no_button3 = QtWidgets.QRadioButton(self.page_5)
-        self.use_situation_no_button3.setGeometry(QtCore.QRect(930, 120, 51, 20))
+        self.use_situation_no_button3.setGeometry(QtCore.QRect(940, 80, 51, 20))
         self.use_situation_no_button3.setObjectName("use_situation_no_button3")
 
         #「電子產品使用情況3」總按鈕
@@ -1066,33 +1104,49 @@ class Ui_MainWindow(object):
         self.use_situation3_group.addButton(self.use_situation_yes_button3)
         self.use_situation3_group.addButton(self.use_situation_no_button3)
 
-        #「調整顯示器頻率」標籤
+        '''右上角的兩個1-10問題'''
+        #點擊程度的上排數字標籤
+        self.use_situation_upnumber_label = QtWidgets.QLabel(self.page_5)
+        self.use_situation_upnumber_label.setGeometry(QtCore.QRect(815, 189, 200, 15))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.use_situation_upnumber_label.setFont(font)
+        self.use_situation_upnumber_label.setObjectName("use_situation_upnumber_label")
+        #「調整顯示器頻率」（電子產品狀況4）標籤
         self.use_situation_label4 = QtWidgets.QLabel(self.page_5)
-        self.use_situation_label4.setGeometry(QtCore.QRect(560, 160, 261, 16))
+        self.use_situation_label4.setGeometry(QtCore.QRect(560, 200, 241, 16))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.use_situation_label4.setFont(font)
         self.use_situation_label4.setObjectName("use_situation_label4")
-
-        #「調整顯示器頻率」滑桿
-        self.use_situation_slider4 = QtWidgets.QSlider(self.page_5)
-        self.use_situation_slider4.setGeometry(QtCore.QRect(820, 160, 161, 22))
-        self.use_situation_slider4.setOrientation(QtCore.Qt.Horizontal)
-        self.use_situation_slider4.setObjectName("use_situation_slider4")
-
-        #「光線情形」標籤
+        #「光線情形」（電子產品狀況5）標籤
         self.use_situation_label5 = QtWidgets.QLabel(self.page_5)
-        self.use_situation_label5.setGeometry(QtCore.QRect(560, 200, 261, 16))
+        self.use_situation_label5.setGeometry(QtCore.QRect(560, 160, 221, 16))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.use_situation_label5.setFont(font)
         self.use_situation_label5.setObjectName("use_situation_label5")
+       
+        # 創建 QButtonGroup 並將按鈕加入組
+        self.use_situation_button_group4 = QtWidgets.QButtonGroup(self.page_5)  
+        self.temp_button2 = []  
+        x_positions = [810, 829, 848, 867, 887, 907, 926, 947, 968, 990]  
+        y_position2 = 202  
 
-        #「光線情形」滑桿
-        self.use_situation_slider5 = QtWidgets.QSlider(self.page_5)
-        self.use_situation_slider5.setGeometry(QtCore.QRect(820, 200, 161, 22))
-        self.use_situation_slider5.setOrientation(QtCore.Qt.Horizontal)
-        self.use_situation_slider5.setObjectName("use_situation_slider5")
+        self.use_situation5_combobox = QtWidgets.QComboBox(self.page_5)
+        self.use_situation5_combobox.setGeometry(QtCore.QRect(870, 160, 121, 26))
+        self.use_situation5_combobox.setObjectName("use_situation5_combobox")
+        self.use_situation5_combobox.addItem("")
+        self.use_situation5_combobox.addItem("")
+        self.use_situation5_combobox.addItem("")
+        self.use_situation5_combobox.addItem("")
+        # 為第5組生成按鈕
+        for i, x in enumerate(x_positions, 1):  
+            use_situation_button5 = QtWidgets.QRadioButton(self.page_5)
+            use_situation_button5.setGeometry(QtCore.QRect(x, y_position2, 161, 22))
+            use_situation_button5.setObjectName(f"use_situation_button5_{i}")
+            self.temp_button2.append(use_situation_button5)
+            self.use_situation_button_group4.addButton(use_situation_button5, i)  # 指定每個按鈕的ID
 
         #「右中」虛線
         self.line_10 = QtWidgets.QFrame(self.page_5)
@@ -1256,7 +1310,7 @@ class Ui_MainWindow(object):
         self.line_11.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line_11.setObjectName("line_11")
 
-        #「確定儲存」按鈕
+        #註冊頁面「確定儲存」按鈕
         self.Savefile = QtWidgets.QPushButton(self.page_5)
         self.Savefile.setGeometry(QtCore.QRect(470, 570, 141, 51))
         font = QtGui.QFont()
@@ -1272,134 +1326,639 @@ class Ui_MainWindow(object):
         self.signup_homebutton.setGeometry(QtCore.QRect(1060, 10, 31, 31))
         self.signup_homebutton.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("C:/Users/ryan9/Downloads/專題/0923周/home_photo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("home_photo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.signup_homebutton.setIcon(icon)
         self.signup_homebutton.setIconSize(QtCore.QSize(30,30))
         self.signup_homebutton.setObjectName("signup_homebutton")
 
-
-
         self.stackedWidget.addWidget(self.page_5)
+        
+        '''編輯頁面'''
         self.page_6 = QtWidgets.QWidget()
         self.page_6.setObjectName("page_6")
+        #以下是page_6，編輯的介面
+        #以下是page_6，編輯的介面
+        #以下是page_6，編輯的介面
+        #「姓名」標籤
+        self.name_label3_edit = QtWidgets.QLabel(self.page_6)
+        self.name_label3_edit.setGeometry(QtCore.QRect(40, 45, 81, 16))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.name_label3_edit.setFont(font)
+        self.name_label3_edit.setObjectName("name_label3_edit") 
+        #「姓名」輸入匡
+        self.name_input_edit = QtWidgets.QLineEdit(self.page_6)
+        self.name_input_edit.setGeometry(QtCore.QRect(130, 45, 113, 21))
+        self.name_input_edit.setObjectName("name_input")
+        self.name_input_edit.setPlaceholderText("範例：王大明")
+   
+        #「使用者名稱」標籤
+        self.user_name_label_edit = QtWidgets.QLabel(self.page_6)
+        self.user_name_label_edit.setGeometry(QtCore.QRect(300, 45, 81, 16))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.user_name_label_edit.setFont(font)
+        self.user_name_label_edit.setObjectName("user_name_label_edit")
+        #「選擇使用者名稱」下拉式選單  
+        # 這裡跟前面的不一樣喔！
+        self.nameBox_4 = QtWidgets.QComboBox(self.page_6)
+        self.nameBox_4.setGeometry(QtCore.QRect(390, 45, 113, 21))
+        font = QtGui.QFont()
+        font.setFamily("Arial")
+        font.setPointSize(14)
+        self.nameBox_4.setFont(font)
+        self.nameBox_4.setObjectName("nameBox_4")
+        self.nameBox_4.setPlaceholderText("選擇欲更新使用者")
 
+        #「生日」標籤
+        self.birthday_label_edit = QtWidgets.QLabel(self.page_6)
+        self.birthday_label_edit.setGeometry(QtCore.QRect(40, 90, 81, 16))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.birthday_label_edit.setFont(font)
+        self.birthday_label_edit.setObjectName("birthday_label_edit")
+        #「生日」輸入匡
+        self.birthday_input_edit = QtWidgets.QLineEdit(self.page_6)
+        self.birthday_input_edit.setGeometry(QtCore.QRect(130, 90, 113, 21))
+        self.birthday_input_edit.setObjectName("birthday_input_edit")
+        self.birthday_input_edit.setPlaceholderText("範例：20030722")
 
-        self.line_90 = QtWidgets.QFrame(self.page_6)
-        self.line_90.setGeometry(QtCore.QRect(335, 530, 441, 20))
-        self.line_90.setFrameShape(QtWidgets.QFrame.HLine)
-        self.line_90.setFrameShadow(QtWidgets.QFrame.Sunken)
-        self.line_90.setObjectName("line_90")
-
-        self.line_30 = QtWidgets.QFrame(self.page_6)
-        self.line_30.setGeometry(QtCore.QRect(335, 70, 441, 20))
-        self.line_30.setFrameShape(QtWidgets.QFrame.HLine)
-        self.line_30.setFrameShadow(QtWidgets.QFrame.Sunken)
-        self.line_30.setObjectName("line_30")
+        #「性別」標籤
+        self.sex_label_edit = QtWidgets.QLabel(self.page_6)
+        self.sex_label_edit.setGeometry(QtCore.QRect(40, 135, 81, 16))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.sex_label_edit.setFont(font)
+        self.sex_label_edit.setObjectName("sex_label_edit")
+        #「性別」-男生按鈕
+        self.sex_man_button_edit = QtWidgets.QRadioButton(self.page_6)
+        self.sex_man_button_edit.setGeometry(QtCore.QRect(130, 135, 51, 20))
+        self.sex_man_button_edit.setObjectName("sex_man_button_edit")
+        #「性別」-女生按鈕
+        self.sex_women_button_edit = QtWidgets.QRadioButton(self.page_6)
+        self.sex_women_button_edit.setGeometry(QtCore.QRect(190, 135, 51, 20))
+        self.sex_women_button_edit.setObjectName("sex_women_button_edit")
+        #「性別」總按鈕
+        self.sex_group_edit = QtWidgets.QButtonGroup(self.page_6)
+        self.sex_group_edit.addButton(self.sex_women_button_edit)
+        self.sex_group_edit.addButton(self.sex_man_button_edit)
         
-        #Edit title
-        self.Edit_title = QtWidgets.QLabel(self.page_6)
-        self.Edit_title.setEnabled(True)
-        self.Edit_title.setGeometry(QtCore.QRect(475, 40, 160, 31))
+        #「line token」標籤
+        self.line_token_label_edit = QtWidgets.QLabel(self.page_6)
+        self.line_token_label_edit.setGeometry(QtCore.QRect(300, 90, 81, 16))
         font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setPointSize(32)
-        self.Edit_title.setFont(font)
-        self.Edit_title.setObjectName("Edit_title")
-
-        #choose user
-        self.User_1 = QtWidgets.QToolButton(self.page_6)
-        self.User_1.setGeometry(QtCore.QRect(415, 110, 271, 30))
+        font.setPointSize(14)
+        self.line_token_label_edit.setFont(font)
+        self.line_token_label_edit.setObjectName("line_token_label_edit")
+        #「line token」輸入匡
+        self.line_token_input_edit = QtWidgets.QLineEdit(self.page_6)
+        self.line_token_input_edit.setGeometry(QtCore.QRect(390, 90, 113, 21))
+        self.line_token_input_edit.setObjectName("line_token_input_edit")
+        self.line_token_input_edit.setPlaceholderText("請複製貼上")
+        
+        #超連結說明的
+        # 創建 QLabel 作為超連結
+        self.link_edit = QtWidgets.QLabel(self.page_5)
+        self.link_edit.setGeometry(QtCore.QRect(300, 115, 180, 16))
+        # 設置 QLabel 為超連結格式
+        self.link_edit.setText('<a href="https://drive.google.com/file/d/1x-pcbKEawdGpEtdDJnkO7-28H_URY7lm/view?usp=share_link">使用說明 (點擊我開啟PDF)</a>')
+        self.link_edit.setOpenExternalLinks(True)  # 允許點擊後在外部瀏覽器中打開連結
+   
+        #「右眼」標籤
+        self.right_eye_label_edit = QtWidgets.QLabel(self.page_6)
+        self.right_eye_label_edit.setGeometry(QtCore.QRect(290, 235, 81, 16))
         font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setPointSize(12)
-        self.User_1.setFont(font)
-        self.User_1.setObjectName("User_1")
+        font.setPointSize(14)
+        self.right_eye_label_edit.setFont(font)
+        self.right_eye_label_edit.setObjectName("right_eye_label_edit")
+        #「右眼」遠視按鈕
+        self.right_eye_out_button_edit = QtWidgets.QRadioButton(self.page_6)
+        self.right_eye_out_button_edit.setGeometry(QtCore.QRect(330, 225, 51, 20))
+        self.right_eye_out_button_edit.setObjectName("right_eye_out_button_edit")
+        #「右眼」近視按鈕
+        self.right_eye_in_button_edit = QtWidgets.QRadioButton(self.page_6)
+        self.right_eye_in_button_edit.setGeometry(QtCore.QRect(330, 205, 51, 20))
+        self.right_eye_in_button_edit.setObjectName("right_eye_in_button_edit")
+        # 「右眼」近遠視總按鈕
+        self.right_eye_group_edit = QtWidgets.QButtonGroup(self.page_6)
+        self.right_eye_group_edit.addButton(self.right_eye_out_button)
+        self.right_eye_group_edit.addButton(self.right_eye_in_button)
 
-        self.User_2 = QtWidgets.QToolButton(self.page_6)
-        self.User_2.setGeometry(QtCore.QRect(415, 170, 271, 30))
+        #「右眼度數」輸入匡
+        self.right_eye_degree_input_edit = QtWidgets.QLineEdit(self.page_6)
+        self.right_eye_degree_input_edit.setGeometry(QtCore.QRect(390, 215, 71, 20))
+        self.right_eye_degree_input_edit.setObjectName("right_eye_degree_input_edit")
+        self.right_eye_degree_input_edit.setPlaceholderText("範例：200")
+
+        #「右眼」閃光按鈕
+        #還是有放按鈕鍵！如果按到無法取消，直接輸入0即可（預設也是0）
+        self.right_eye_shine_button_edit = QtWidgets.QRadioButton(self.page_6)
+        self.right_eye_shine_button_edit.setGeometry(QtCore.QRect(330, 265, 51, 20))
+        self.right_eye_shine_button_edit.setObjectName("right_eye_shine_button_edit")
+        # 「右眼」閃光總按鈕
+        self.right_eye_shine_group_edit = QtWidgets.QButtonGroup(self.page_6)
+        self.right_eye_shine_group_edit.addButton(self.right_eye_shine_button_edit)
+
+        #「右眼閃光」輸入匡
+        self.right_eye_shine_input_edit = QtWidgets.QLineEdit(self.page_6)
+        self.right_eye_shine_input_edit.setGeometry(QtCore.QRect(390, 265, 71, 20))
+        self.right_eye_shine_input_edit.setObjectName("right_eye_shine_input_edit")
+        self.right_eye_shine_input_edit.setPlaceholderText("若無請填0")
+
+        #「左眼」標籤
+        self.left_eye_label_edit = QtWidgets.QLabel(self.page_6)
+        self.left_eye_label_edit.setGeometry(QtCore.QRect(40, 235, 81, 16))
         font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setPointSize(12)
-        self.User_2.setFont(font)
-        self.User_2.setObjectName("User_2")
+        font.setPointSize(14)
+        self.left_eye_label_edit.setFont(font)
+        self.left_eye_label_edit.setObjectName("left_eye_label_edit")
+        #「左眼」遠視按鈕
+        self.left_eye_out_button_edit = QtWidgets.QRadioButton(self.page_6)
+        self.left_eye_out_button_edit.setGeometry(QtCore.QRect(85, 225, 51, 20))
+        self.left_eye_out_button_edit.setObjectName("left_eye_out_button_edit")
+        #「左眼」近視按鈕
+        self.left_eye_in_button_edit = QtWidgets.QRadioButton(self.page_6)
+        self.left_eye_in_button_edit.setGeometry(QtCore.QRect(85, 205, 51, 20))
+        self.left_eye_in_button_edit.setObjectName("left_eye_in_button_edit")
+        #「左眼」近遠視總按鈕
+        self.left_eye_group_edit = QtWidgets.QButtonGroup(self.page_6)
+        self.left_eye_group_edit.addButton(self.left_eye_out_button_edit)
+        self.left_eye_group_edit.addButton(self.left_eye_in_button_edit)
 
-        self.User_3 = QtWidgets.QToolButton(self.page_6)
-        self.User_3.setGeometry(QtCore.QRect(415, 230, 271, 30))
+        #「左眼度數」輸入匡
+        self.left_eye_degree_input_edit = QtWidgets.QLineEdit(self.page_6)
+        self.left_eye_degree_input_edit.setGeometry(QtCore.QRect(145, 215, 71, 20))
+        self.left_eye_degree_input_edit.setObjectName("left_eye_degree_input_edit")
+        self.left_eye_degree_input_edit.setPlaceholderText("範例：200")
+
+        #「左眼」閃光按鈕
+        self.left_eye_shine_button_edit = QtWidgets.QRadioButton(self.page_6)
+        self.left_eye_shine_button_edit.setGeometry(QtCore.QRect(85, 265, 51, 20))
+        self.left_eye_shine_button_edit.setObjectName("left_eye_shine_button_edit")
+        # 「左眼」閃光總按鈕
+        self.left_eye_shine_group_edit = QtWidgets.QButtonGroup(self.page_6)
+        self.left_eye_shine_group_edit.addButton(self.left_eye_shine_button_edit)
+
+        #「左眼閃光」輸入匡
+        self.left_eye_shine_input_edit = QtWidgets.QLineEdit(self.page_6)
+        self.left_eye_shine_input_edit.setGeometry(QtCore.QRect(145, 265, 71, 20))
+        self.left_eye_shine_input_edit.setObjectName("left_eye_shine_input_edit")
+        self.left_eye_shine_input_edit.setPlaceholderText("若無請填0")
+
+       
+       
+        #此處五個為「眼睛用眼狀況」(左下角那一坨)
+        #此處五個為「眼睛用眼狀況」(左下角那一坨)
+        #此處五個為「眼睛用眼狀況」(左下角那一坨)
+        # 配戴眼鏡的頻率（用眼狀況問題1）標籤
+        self.eye_situation_label1_edit = QtWidgets.QLabel(self.page_6)
+        self.eye_situation_label1_edit.setGeometry(QtCore.QRect(40, 340, 261, 16))
         font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setPointSize(12)
-        self.User_3.setFont(font)
-        self.User_3.setObjectName("User_3")
-
-        self.User_4 = QtWidgets.QToolButton(self.page_6)
-        self.User_4.setGeometry(QtCore.QRect(415, 300, 271, 30))
+        font.setPointSize(14)
+        self.eye_situation_label1_edit.setFont(font)
+        self.eye_situation_label1_edit.setObjectName("eye_situation_label1_edit")   
+        # 配戴隱眼的頻率（用眼狀況問題2）標籤
+        self.eye_situation_label2_edit = QtWidgets.QLabel(self.page_6)
+        self.eye_situation_label2_edit.setGeometry(QtCore.QRect(40, 380, 261, 16))
         font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setPointSize(12)
-        self.User_4.setFont(font)
-        self.User_4.setObjectName("User_4")
-
-        self.User_5 = QtWidgets.QToolButton(self.page_6)
-        self.User_5.setGeometry(QtCore.QRect(415, 360, 271, 30))
+        font.setPointSize(14)
+        self.eye_situation_label2_edit.setFont(font)
+        self.eye_situation_label2_edit.setObjectName("eye_situation_label2_edit")
+        # 眼睛乾澀頻率（用眼狀況問題3）標籤
+        self.eye_situation_label3_edit = QtWidgets.QLabel(self.page_6)
+        self.eye_situation_label3_edit.setGeometry(QtCore.QRect(40, 420, 261, 16))
         font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setPointSize(12)
-        self.User_5.setFont(font)
-        self.User_5.setObjectName("User_5")
+        font.setPointSize(14)
+        self.eye_situation_label3_edit.setFont(font)
+        self.eye_situation_label3_edit.setObjectName("eye_situation_label_edit")
+        # 頭痛暈眩頻率（用眼狀況問題4）標籤
+        self.eye_situation_label4_edit = QtWidgets.QLabel(self.page_6)
+        self.eye_situation_label4_edit.setGeometry(QtCore.QRect(40, 460, 261, 16))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.eye_situation_label4_edit.setFont(font)
+        self.eye_situation_label4_edit.setObjectName("eye_situation_label4_edit")
+        # 眼睛疲勞頻率（用眼狀況問題5）標籤
+        self.eye_situation_label5_edit = QtWidgets.QLabel(self.page_6)
+        self.eye_situation_label5_edit.setGeometry(QtCore.QRect(40, 500, 261, 16))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.eye_situation_label5_edit.setFont(font)
+        self.eye_situation_label5_edit.setObjectName("eye_situation_label5_edit")
+        #點擊程度的上排數字標籤（1到10那個）
+        self.eye_situation_upnumber_label_edit = QtWidgets.QLabel(self.page_6)
+        self.eye_situation_upnumber_label_edit.setGeometry(QtCore.QRect(305, 327, 200, 15))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.eye_situation_upnumber_label_edit.setFont(font)
+        self.eye_situation_upnumber_label_edit.setObjectName("eye_situation_upnumber_label_edit")
+             
+        # 創建 QButtonGroup 並將按鈕加入組
+        self.eye_situation_button_group1_edit = QtWidgets.QButtonGroup(self.page_6)# 配戴眼鏡的頻率
+        self.eye_situation_button_group2_edit = QtWidgets.QButtonGroup(self.page_6)# 配戴隱眼的頻率
+        self.eye_situation_button_group3_edit = QtWidgets.QButtonGroup(self.page_6)# 眼睛乾澀頻率
+        self.eye_situation_button_group4_edit = QtWidgets.QButtonGroup(self.page_6)# 頭痛暈眩頻率
+        self.eye_situation_button_group5_edit = QtWidgets.QButtonGroup(self.page_6)# 眼睛疲勞頻率
+        # 根據提供的 x 座標生成 QRadioButton
+        self.temp_button1_edit = []  
+        self.temp_button2_edit = []  
+        self.temp_button3_edit = []  
+        self.temp_button4_edit = []  
+        self.temp_button5_edit = []  
+        x_positions = [300, 319, 338, 357, 377, 397, 416, 437, 458, 480]  
+        y_position1 = 340  
+        y_position2 = 380  
+        y_position3 = 420 
+        y_position4 = 460
+        y_position5 = 500
+        for i, x in enumerate(x_positions, 1):  # 根據 x_positions 的位置來生成按鈕
+            eye_situation_button1_edit = QtWidgets.QRadioButton(self.page_6)
+            eye_situation_button1_edit.setGeometry(QtCore.QRect(x, y_position1, 161, 22))
+            eye_situation_button1_edit.setObjectName(f"self.eye_situation_button1_{i}_edit")
+            self.temp_button1_edit.append(eye_situation_button1_edit)
+            self.eye_situation_button_group1_edit.addButton(eye_situation_button1_edit,i)  # 將按鈕加入到 ButtonGroup
+        for i, x in enumerate(x_positions, 1):  
+            eye_situation_button2_edit = QtWidgets.QRadioButton(self.page_6)
+            eye_situation_button2_edit.setGeometry(QtCore.QRect(x, y_position2, 161, 22))
+            eye_situation_button2_edit.setObjectName(f"eye_situation_button2_{i}_edit")
+            self.temp_button2_edit.append(eye_situation_button2_edit)
+            self.eye_situation_button_group2_edit.addButton(eye_situation_button2_edit,i)  
+        for i, x in enumerate(x_positions, 1):  
+            eye_situation_button3_edit = QtWidgets.QRadioButton(self.page_6)
+            eye_situation_button3_edit.setGeometry(QtCore.QRect(x, y_position3, 161, 22))
+            eye_situation_button3_edit.setObjectName(f"eye_situation_button3_{i}_edit")
+            self.temp_button3_edit.append(eye_situation_button3_edit)
+            self.eye_situation_button_group3_edit.addButton(eye_situation_button3_edit,i)  
+        for i, x in enumerate(x_positions, 1):  
+            eye_situation_button4_edit = QtWidgets.QRadioButton(self.page_6)
+            eye_situation_button4_edit.setGeometry(QtCore.QRect(x, y_position4, 161, 22))
+            eye_situation_button4_edit.setObjectName(f"eye_situation_button4_{i}_edit")
+            self.temp_button4_edit.append(eye_situation_button4_edit)
+            self.eye_situation_button_group4_edit.addButton(eye_situation_button4_edit,i) 
+        for i, x in enumerate(x_positions, 1):  
+            eye_situation_button5_edit = QtWidgets.QRadioButton(self.page_6)
+            eye_situation_button5_edit.setGeometry(QtCore.QRect(x, y_position5, 161, 22))
+            eye_situation_button5_edit.setObjectName(f"eye_situation_button5_{i}_edit")
+            self.temp_button5_edit.append(eye_situation_button5_edit)
+            self.eye_situation_button_group5_edit.addButton(eye_situation_button5_edit,i)
 
-        self.Change_detail = QtWidgets.QPushButton(self.page_6)
-        self.Change_detail.setGeometry(QtCore.QRect(388, 550, 141, 71))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.Change_detail.sizePolicy().hasHeightForWidth())
-        self.Change_detail.setSizePolicy(sizePolicy)
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        # 電子產品狀況（右上角那一坨）
+        # 電子產品狀況（右上角那一坨）
+        # 電子產品狀況（右上角那一坨）
+        #「是否長時間使用電子產品」標籤
+        self.use_situation_label1_edit = QtWidgets.QLabel(self.page_6)
+        self.use_situation_label1_edit.setGeometry(QtCore.QRect(560, 50, 301, 16))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.use_situation_label1_edit.setFont(font)
+        self.use_situation_label1_edit.setObjectName("use_situation_label1_edit")
+
+        #「是否長時間使用電子產品」-yes按鈕
+        self.use_situation_yes_button1_edit = QtWidgets.QRadioButton(self.page_6)
+        self.use_situation_yes_button1_edit.setGeometry(QtCore.QRect(880, 50, 51, 20))
+        self.use_situation_yes_button1_edit.setObjectName("use_situation_yes_button1_edit")
+
+        #「是否長時間使用電子產品」不，按鈕
+        self.use_situation_no_button1_edit = QtWidgets.QRadioButton(self.page_6)
+        self.use_situation_no_button1_edit.setGeometry(QtCore.QRect(940, 50, 51, 20))
+        self.use_situation_no_button1_edit.setObjectName("use_situation_no_button1_edit")
+
+        #「是否長時間使用電子產品」總按鈕
+        self.use_situation1_group_edit = QtWidgets.QButtonGroup(self.page_6)
+        self.use_situation1_group_edit.addButton(self.use_situation_yes_button1_edit)
+        self.use_situation1_group_edit.addButton(self.use_situation_no_button1_edit)
+
+        
+
+        #「使用設備時間」標籤
+        self.use_situation_label2_edit = QtWidgets.QLabel(self.page_6)
+        self.use_situation_label2_edit.setGeometry(QtCore.QRect(560, 130, 301, 16)) 
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.use_situation_label2_edit.setFont(font)
+        self.use_situation_label2_edit.setObjectName("use_situation_label2_edit")
+
+        #「使用設備時間」下拉式選單
+        self.use_situation2_combobox_edit = QtWidgets.QComboBox(self.page_6)
+        self.use_situation2_combobox_edit.setGeometry(QtCore.QRect(870, 130, 121, 26))
+        self.use_situation2_combobox_edit.setObjectName("use_situation2_combobox_edit")
+        self.use_situation2_combobox_edit.addItem("")
+        self.use_situation2_combobox_edit.addItem("")
+        self.use_situation2_combobox_edit.addItem("")
+        self.use_situation2_combobox_edit.addItem("")
+        self.use_situation2_combobox_edit.addItem("")
+
+        #「防藍光設備」標籤
+        self.use_situation_label3_edit = QtWidgets.QLabel(self.page_6)
+        self.use_situation_label3_edit.setGeometry(QtCore.QRect(560, 90, 321, 16)) 
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.use_situation_label3_edit.setFont(font)
+        self.use_situation_label3_edit.setObjectName("use_situation_label3_edit")
+
+        #「防藍光設備」是，按鈕
+        self.use_situation_yes_button3_edit = QtWidgets.QRadioButton(self.page_6)
+        self.use_situation_yes_button3_edit.setGeometry(QtCore.QRect(880, 90, 51, 20))
+        self.use_situation_yes_button3_edit.setObjectName("use_situation_yes_button3_edit")
+
+        #「防藍光設備」不，按鈕
+        self.use_situation_no_button3_edit = QtWidgets.QRadioButton(self.page_6)
+        self.use_situation_no_button3_edit.setGeometry(QtCore.QRect(940, 90, 51, 20))
+        self.use_situation_no_button3_edit.setObjectName("use_situation_no_button3_edit")
+
+        #「電子產品使用情況3」總按鈕
+        self.use_situation3_group_edit = QtWidgets.QButtonGroup(self.page_6)
+        self.use_situation3_group_edit.addButton(self.use_situation_yes_button3_edit)
+        self.use_situation3_group_edit.addButton(self.use_situation_no_button3_edit)
+
+        '''右上角的兩個1-10問題 '''
+        #點擊程度的上排數字標籤
+        self.use_situation_upnumber_label_edit = QtWidgets.QLabel(self.page_6)
+        self.use_situation_upnumber_label_edit.setGeometry(QtCore.QRect(815, 199, 200, 15))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.use_situation_upnumber_label_edit.setFont(font)
+        self.use_situation_upnumber_label_edit.setObjectName("use_situation_upnumber_label_edit")
+        #「調整顯示器頻率」（電子產品狀況4）標籤
+        self.use_situation_label4_edit = QtWidgets.QLabel(self.page_6)
+        self.use_situation_label4_edit.setGeometry(QtCore.QRect(560, 210, 241, 16))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.use_situation_label4_edit.setFont(font)
+        self.use_situation_label4_edit.setObjectName("use_situation_label4_edit")
+        #「光線情形」（電子產品狀況5）標籤
+        self.use_situation_label5_edit = QtWidgets.QLabel(self.page_6)
+        self.use_situation_label5_edit.setGeometry(QtCore.QRect(560, 170, 221, 16))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.use_situation_label5_edit.setFont(font)
+        self.use_situation_label5_edit.setObjectName("use_situation_label5_edit")
+       
+        # 創建 QButtonGroup 並將按鈕加入組
+        self.use_situation_button_group4_edit = QtWidgets.QButtonGroup(self.page_6)  
+        self.temp_button2_edit = []  
+        x_positions = [810, 829, 848, 867, 887, 907, 926, 947, 968, 990]  
+        y_position2 = 212  
+
+        self.use_situation5_combobox_edit = QtWidgets.QComboBox(self.page_6)
+        self.use_situation5_combobox_edit.setGeometry(QtCore.QRect(870, 170, 121, 26))
+        self.use_situation5_combobox_edit.setObjectName("use_situation5_combobox_edit")
+        self.use_situation5_combobox_edit.addItem("")
+        self.use_situation5_combobox_edit.addItem("")
+        self.use_situation5_combobox_edit.addItem("")
+        self.use_situation5_combobox_edit.addItem("")
+        # 為第5組生成按鈕
+        for i, x in enumerate(x_positions, 1):  
+            use_situation_button5_edit = QtWidgets.QRadioButton(self.page_6)
+            use_situation_button5_edit.setGeometry(QtCore.QRect(x, y_position2, 161, 22))
+            use_situation_button5_edit.setObjectName(f"use_situation_button5_{i}_edit")
+            self.temp_button2_edit.append(use_situation_button5_edit)
+            self.use_situation_button_group4_edit.addButton(use_situation_button5_edit, i)  # 指定每個按鈕的ID
+        
+        
+
+
+        
+        
+        # 生活習慣（右下角那一坨）
+        # 生活習慣（右下角那一坨）
+        # 生活習慣（右下角那一坨）
+        #「保健食品」（生活習慣1）標籤
+        self.habit_label1_edit = QtWidgets.QLabel(self.page_6)
+        self.habit_label1_edit.setGeometry(QtCore.QRect(560, 260, 231, 16))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.habit_label1_edit.setFont(font)
+        self.habit_label1_edit.setObjectName("habit_label1_edit")
+        #「保健食品」是，按鈕（生活習慣1）
+        self.habit_yes_button1_edit = QtWidgets.QRadioButton(self.page_6)
+        self.habit_yes_button1_edit.setGeometry(QtCore.QRect(800, 260, 51, 20))
+        self.habit_yes_button1_edit.setObjectName("habit_yes_button1_edit")
+        #「保健食品」不，按鈕（生活習慣1）
+        self.habit_no_button1_edit = QtWidgets.QRadioButton(self.page_6)
+        self.habit_no_button1_edit.setGeometry(QtCore.QRect(860, 260, 51, 20))
+        self.habit_no_button1_edit.setObjectName("habit_no_button1_edit")
+        #「保健食品」總按鈕（生活習慣1）
+        self.habit1_group_edit = QtWidgets.QButtonGroup(self.page_6)
+        self.habit1_group_edit.addButton(self.habit_yes_button1_edit)
+        self.habit1_group_edit.addButton(self.habit_no_button1_edit)
+
+        #「檢查眼睛頻率」（生活習慣2）標籤
+        self.habit_label2_edit = QtWidgets.QLabel(self.page_6)
+        self.habit_label2_edit.setGeometry(QtCore.QRect(560, 300, 231, 16))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.habit_label2_edit.setFont(font)
+        self.habit_label2_edit.setObjectName("habit_label2_edit")
+        #「檢查眼睛頻率」（生活習慣2）下拉式選單
+        self.habit_combobox2_edit = QtWidgets.QComboBox(self.page_6)
+        self.habit_combobox2_edit.setGeometry(QtCore.QRect(730, 300, 104, 26))
+        self.habit_combobox2_edit.setObjectName("habit_combobox2_edit")
+        self.habit_combobox2_edit.addItem("")
+        self.habit_combobox2_edit.addItem("")
+        self.habit_combobox2_edit.addItem("")
+        self.habit_combobox2_edit.addItem("")
+
+        #「睡眠時長」（生活習慣3）標籤
+        self.habit_label3_edit = QtWidgets.QLabel(self.page_6)
+        self.habit_label3_edit.setGeometry(QtCore.QRect(560, 340, 231, 16))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.habit_label3_edit.setFont(font)
+        self.habit_label3_edit.setObjectName("habit_label3_edit")
+        #「睡眠時長」（生活習慣3）下拉式選單
+        self.habit_combobox3_edit = QtWidgets.QComboBox(self.page_6)
+        self.habit_combobox3_edit.setGeometry(QtCore.QRect(730, 340, 104, 26))
+        self.habit_combobox3_edit.setObjectName("habit_combobox3_edit")
+        self.habit_combobox3_edit.addItem("")
+        self.habit_combobox3_edit.addItem("")
+        self.habit_combobox3_edit.addItem("")
+        self.habit_combobox3_edit.addItem("")
+
+        #「每週運動次數」（生活習慣4）標籤
+        self.habit_label4_edit = QtWidgets.QLabel(self.page_6)
+        self.habit_label4_edit.setGeometry(QtCore.QRect(560, 380, 231, 16))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.habit_label4_edit.setFont(font)
+        self.habit_label4_edit.setObjectName("habit_label4_edit")
+        #「每週運動次數」（生活習慣4）下拉式選單
+        self.habit_combobox4_edit = QtWidgets.QComboBox(self.page_6)
+        self.habit_combobox4_edit.setGeometry(QtCore.QRect(730, 380, 104, 26))
+        self.habit_combobox4_edit.setObjectName("habit_combobox4_edit")
+        self.habit_combobox4_edit.addItem("")
+        self.habit_combobox4_edit.addItem("")
+        self.habit_combobox4_edit.addItem("")
+        self.habit_combobox4_edit.addItem("")
+
+        #「多久會休息」（生活習慣5）標籤
+        self.habit_label5_edit = QtWidgets.QLabel(self.page_6)
+        self.habit_label5_edit.setGeometry(QtCore.QRect(560, 420, 271, 16))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.habit_label5_edit.setFont(font)
+        self.habit_label5_edit.setObjectName("habit_label5_edit")
+        #「多久會休息」（生活習慣5）下拉式選單
+        self.habit_combobox5_edit = QtWidgets.QComboBox(self.page_6)
+        self.habit_combobox5_edit.setGeometry(QtCore.QRect(830, 420, 104, 26))
+        self.habit_combobox5_edit.setObjectName("habit_combobox5_edit")
+        self.habit_combobox5_edit.addItem("")
+        self.habit_combobox5_edit.addItem("")
+        self.habit_combobox5_edit.addItem("")
+        self.habit_combobox5_edit.addItem("")
+        self.habit_combobox5_edit.addItem("")
+        self.habit_combobox5_edit.addItem("")
+        self.habit_combobox5_edit.addItem("")
+
+        #「平均休息持續時間」（生活習慣6）標籤
+        self.habit_label6_edit = QtWidgets.QLabel(self.page_6)
+        self.habit_label6_edit.setGeometry(QtCore.QRect(560, 460, 271, 16))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.habit_label6_edit.setFont(font)
+        self.habit_label6_edit.setObjectName("habit_label6_edit")
+        #「休息持續時間」（生活習慣6）下拉式選單
+        self.habit_combobox6_edit = QtWidgets.QComboBox(self.page_6)
+        self.habit_combobox6_edit.setGeometry(QtCore.QRect(830, 460, 104, 26))
+        self.habit_combobox6_edit.setObjectName("habit_combobox6_edit")
+        self.habit_combobox6_edit.addItem("")
+        self.habit_combobox6_edit.addItem("")
+        self.habit_combobox6_edit.addItem("")
+        self.habit_combobox6_edit.addItem("")
+
+        #「休息方式為何」（生活習慣7）標籤
+        self.habit_label7_edit = QtWidgets.QLabel(self.page_6)
+        self.habit_label7_edit.setGeometry(QtCore.QRect(560, 500, 271, 16))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.habit_label7_edit.setFont(font)
+        self.habit_label7_edit.setObjectName("habit_label7_edit")
+        #「休息方式為何-閉目養神」（生活習慣7）複選
+        self.habit_close_checkbox7_edit = QtWidgets.QCheckBox(self.page_6)
+        self.habit_close_checkbox7_edit.setGeometry(QtCore.QRect(800, 500, 87, 20))
+        self.habit_close_checkbox7_edit.setObjectName("habit_close_checkbox7_edit")
+        #「休息方式為何-眼部運動」（生活習慣7）複選
+        self.habit_exercise_checkbox7_edit = QtWidgets.QCheckBox(self.page_6)
+        self.habit_exercise_checkbox7_edit.setGeometry(QtCore.QRect(880, 500, 87, 20))
+        self.habit_exercise_checkbox7_edit.setObjectName("habit_exercise_checkbox7_edit")
+        #「休息方式為何-其他」（生活習慣7）複選
+        self.habit_other_checkbox7_edit = QtWidgets.QCheckBox(self.page_6)
+        self.habit_other_checkbox7_edit.setGeometry(QtCore.QRect(960, 500, 87, 20))
+        self.habit_other_checkbox7_edit.setObjectName("habit_other_checkbox7_edit")
+
+
+
+        # 虛線們
+        # 虛線們
+        # 虛線們
+        #「左上」虛線
+        self.line_1_edit = QtWidgets.QFrame(self.page_6)
+        self.line_1_edit.setGeometry(QtCore.QRect(30, 10, 441, 20))
+        self.line_1_edit.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line_1_edit.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_1_edit.setObjectName("line_1_edit")
+        #「右上」虛線
+        self.line_6_edit = QtWidgets.QFrame(self.page_6)
+        self.line_6_edit.setGeometry(QtCore.QRect(550, 10, 441, 20))
+        self.line_6_edit.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line_6_edit.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_6_edit.setObjectName("line_6_edit")
+        #「虛線7」
+        self.line_7_edit = QtWidgets.QFrame(self.page_6)
+        self.line_7_edit.setGeometry(QtCore.QRect(30, 170, 441, 20))
+        self.line_7_edit.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line_7_edit.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_7_edit.setObjectName("line_7_edit")
+        # 虛線
+        self.line_8_edit = QtWidgets.QFrame(self.page_6)
+        self.line_8_edit.setGeometry(QtCore.QRect(30, 305, 441, 20))
+        self.line_8_edit.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line_8_edit.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_8_edit.setObjectName("line_8_edit")
+        # 虛線
+        self.line_9_edit = QtWidgets.QFrame(self.page_6)
+        self.line_9_edit.setGeometry(QtCore.QRect(30, 540, 441, 20))
+        self.line_9_edit.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line_9_edit.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_9_edit.setObjectName("line_9_edit")
+        #「右中」虛線
+        self.line_10_edit = QtWidgets.QFrame(self.page_6)
+        self.line_10_edit.setGeometry(QtCore.QRect(550, 230, 441, 20))
+        self.line_10_edit.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line_10_edit.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_10_edit.setObjectName("line_10_edit")
+        #「右下」虛線
+        self.line_11_edit = QtWidgets.QFrame(self.page_6)
+        self.line_11_edit.setGeometry(QtCore.QRect(550, 540, 441, 20))
+        self.line_11_edit.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line_11_edit.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_11_edit.setObjectName("line_11_edit")
+        
+    
+
+        # 編輯頁面的「儲存按鈕」
+        self.Savefile_edit = QtWidgets.QPushButton(self.page_6)
+        self.Savefile_edit.setGeometry(QtCore.QRect(330, 560, 171, 71))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(16)
         font.setBold(True)
         font.setWeight(75)
-        self.Change_detail.setFont(font)
-        self.Change_detail.setObjectName("Change_detail")
-
-        self.Delete = QtWidgets.QPushButton(self.page_6)
-        self.Delete.setGeometry(QtCore.QRect(580, 550, 141, 71))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.Delete.sizePolicy().hasHeightForWidth())
-        self.Delete.setSizePolicy(sizePolicy)
+        self.Savefile_edit.setFont(font)
+        self.Savefile_edit.setObjectName("Savefile_edit")
+        # 編輯頁面的「刪除按鈕」
+        self.deletefile_edit = QtWidgets.QPushButton(self.page_6)
+        self.deletefile_edit.setGeometry(QtCore.QRect(560, 560, 171, 71))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(16)
         font.setBold(True)
         font.setWeight(75)
-        self.Delete.setFont(font)
-        self.Delete.setObjectName("Delete")
-
-        self.homebutton = QtWidgets.QPushButton(self.page_6)
-        self.homebutton.setGeometry(QtCore.QRect(1060, 10, 31, 31))
-        self.homebutton.setText("")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("C:/Users/ryan9/Downloads/專題/0923周/home_photo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.homebutton.setIcon(icon)
-        self.homebutton.setIconSize(QtCore.QSize(30,30))
-        self.homebutton.setObjectName("homebutton")
-
-        #edit（選擇使用者時的頁面）：edit1_homebutton
+        self.deletefile_edit.setFont(font)
+        self.deletefile_edit.setObjectName("deletefile_edit")     
+        # 編輯頁面的「edit1_homebutton」
         self.edit1_homebutton = QtWidgets.QPushButton(self.page_6)
         self.edit1_homebutton.setGeometry(QtCore.QRect(1060, 10, 31, 31))
         self.edit1_homebutton.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("C:/Users/ryan9/Downloads/專題/0923周/home_photo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("/Users/bunnnn1002/eye_myself/0908周改/home.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.edit1_homebutton.setIcon(icon)
         self.edit1_homebutton.setIconSize(QtCore.QSize(30,30))
         self.edit1_homebutton.setObjectName("edit1_homebutton")
 
+        '''後側介面'''
         self.stackedWidget.addWidget(self.page_6)
         self.page_7 = QtWidgets.QWidget()
         self.page_7.setObjectName("page_7")
-
         #「頂端文字說明」（那一大串的那個）
         self.top_label = QtWidgets.QLabel(self.page_7)
         self.top_label.setEnabled(True)
@@ -1523,96 +2082,89 @@ class Ui_MainWindow(object):
         self.question_7_label = QtWidgets.QLabel(self.page_7)
         self.question_7_label.setGeometry(QtCore.QRect(600, 160, 275, 20))
         self.question_7_label.setObjectName("question_7_label")
-
-        #「問題7」滑桿
-        self.question_7_Slider = QtWidgets.QSlider(self.page_7)
-        self.question_7_Slider.setGeometry(QtCore.QRect(910, 160, 160, 22))
-        self.question_7_Slider.setOrientation(QtCore.Qt.Horizontal)
-        self.question_7_Slider.setObjectName("question_7_Slider")
-
-        #以下為「問題7-數值呈現」
-        self.label_question_7 = QtWidgets.QLabel(self.page_7)
-        self.label_question_7.setGeometry(QtCore.QRect(890, 160, 100, 22))
-        def update_label():
-            self.label_question_7.setText(str(self.question_7_Slider.value()))
-        self.question_7_Slider.valueChanged.connect(update_label)
-        self.question_7_Slider.setRange(0, 10)
-
         #「問題8」標籤
         self.question_8_label = QtWidgets.QLabel(self.page_7)
         self.question_8_label.setGeometry(QtCore.QRect(600, 230, 273, 20))
         self.question_8_label.setObjectName("question_8_label")
-
-        #「問題8」滑桿
-        self.question_8_Slider = QtWidgets.QSlider(self.page_7)
-        self.question_8_Slider.setGeometry(QtCore.QRect(910, 230, 160, 22))
-        self.question_8_Slider.setOrientation(QtCore.Qt.Horizontal)
-        self.question_8_Slider.setObjectName("question_8_Slider")
-
-        #以下為「問題8-數值呈現」
-        self.label_question_8 = QtWidgets.QLabel(self.page_7)
-        self.label_question_8.setGeometry(QtCore.QRect(890, 230, 100, 22))
-        def update_label():
-            self.label_question_8.setText(str(self.question_8_Slider.value()))
-        self.question_8_Slider.valueChanged.connect(update_label)
-        self.question_8_Slider.setRange(0, 10)
-
         #「問題9」標籤
         self.question_9_label = QtWidgets.QLabel(self.page_7)
         self.question_9_label.setGeometry(QtCore.QRect(600, 310, 273, 20))
         self.question_9_label.setObjectName("question_9_label")
-
-        #「問題9」滑桿
-        self.question_9_Slider = QtWidgets.QSlider(self.page_7)
-        self.question_9_Slider.setGeometry(QtCore.QRect(910, 310, 160, 22))
-        self.question_9_Slider.setOrientation(QtCore.Qt.Horizontal)
-        self.question_9_Slider.setObjectName("question_9_Slider")
-
-        #以下為「問題9-數值呈現」
-        self.label_question_9 = QtWidgets.QLabel(self.page_7)
-        self.label_question_9.setGeometry(QtCore.QRect(890, 310, 100, 22))
-        def update_label():
-            self.label_question_9.setText(str(self.question_9_Slider.value()))
-        self.question_9_Slider.valueChanged.connect(update_label)
-        self.question_9_Slider.setRange(0, 10)
-
         #「問題10」標籤
         self.question_10_label = QtWidgets.QLabel(self.page_7)
         self.question_10_label.setGeometry(QtCore.QRect(600, 380, 273, 20))
         self.question_10_label.setObjectName("question_10_label")
-
-        #「問題10」滑桿
-        self.question_10_Slider = QtWidgets.QSlider(self.page_7)
-        self.question_10_Slider.setGeometry(QtCore.QRect(910, 380, 160, 22))
-        self.question_10_Slider.setOrientation(QtCore.Qt.Horizontal)
-        self.question_10_Slider.setObjectName("question_10_Slider")
-
-        #以下為「問題10-數值呈現」
-        self.label_question_10 = QtWidgets.QLabel(self.page_7)
-        self.label_question_10.setGeometry(QtCore.QRect(890, 380, 100, 22))
-        def update_label():
-            self.label_question_10.setText(str(self.question_10_Slider.value()))
-        self.question_10_Slider.valueChanged.connect(update_label)
-        self.question_10_Slider.setRange(0, 10)
-
         #「問題11」標籤
         self.question_11_label = QtWidgets.QLabel(self.page_7)
         self.question_11_label.setGeometry(QtCore.QRect(600, 460, 273, 20))
         self.question_11_label.setObjectName("question_11_label")
+        
+        #點擊程度的上排數字標籤（1到10那個）
+        self.eye_situation_upnumber_label_edit = QtWidgets.QLabel(self.page_6)
+        self.eye_situation_upnumber_label_edit.setGeometry(QtCore.QRect(305, 327, 200, 15))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.eye_situation_upnumber_label_edit.setFont(font)
+        self.eye_situation_upnumber_label_edit.setObjectName("eye_situation_upnumber_label_edit")
+             
+        # 創建 QButtonGroup 並將按鈕加入組(posttest)
+        self.question_button_group7 = QtWidgets.QButtonGroup(self.page_7)# 配戴眼鏡的頻率
+        self.question_button_group8 = QtWidgets.QButtonGroup(self.page_7)# 配戴隱眼的頻率
+        self.question_button_group9 = QtWidgets.QButtonGroup(self.page_7)# 眼睛乾澀頻率
+        self.question_button_group10 = QtWidgets.QButtonGroup(self.page_7)# 頭痛暈眩頻率
+        self.question_button_group11 = QtWidgets.QButtonGroup(self.page_7)# 眼睛疲勞頻率
+        # 根據提供的 x 座標生成 QRadioButton
+        self.temp_button7 = []  
+        self.temp_button8 = []  
+        self.temp_button9 = []  
+        self.temp_button10 = []  
+        self.temp_button11 = []  
+        x_positions = [880, 899, 918, 937, 957, 977, 996, 1017, 1038, 1060]  
+        y_position1 = 160  
+        y_position2 = 230  
+        y_position3 = 310 
+        y_position4 = 380
+        y_position5 = 460
+        # 配戴眼鏡的頻率（QRadioButton 正確使用）
+        for i, x in enumerate(x_positions, 1):  # 根據 x_positions 的位置來生成按鈕
+            question_button7 = QtWidgets.QRadioButton(self.page_7)
+            question_button7.setGeometry(QtCore.QRect(x, y_position1, 161, 22))
+            question_button7.setObjectName(f"question_button7_{i}")
+            self.temp_button7.append(question_button7)
+            self.question_button_group7.addButton(question_button7, i)  # 將按鈕加入到 ButtonGroup 並指定ID
 
-        #「問題11」滑桿
-        self.question_11_Slider = QtWidgets.QSlider(self.page_7)
-        self.question_11_Slider.setGeometry(QtCore.QRect(910, 460, 160, 22))
-        self.question_11_Slider.setOrientation(QtCore.Qt.Horizontal)
-        self.question_11_Slider.setObjectName("question_11_Slider")
+        # 配戴隱眼的頻率
+        for i, x in enumerate(x_positions, 1):  
+            question_button8 = QtWidgets.QRadioButton(self.page_7)
+            question_button8.setGeometry(QtCore.QRect(x, y_position2, 161, 22))
+            question_button8.setObjectName(f"question_button8_{i}")
+            self.temp_button8.append(question_button8)
+            self.question_button_group8.addButton(question_button8, i)  # 指定ID
 
-        #以下為「問題11-數值呈現」
-        self.label_question_11 = QtWidgets.QLabel(self.page_7)
-        self.label_question_11.setGeometry(QtCore.QRect(890, 460, 100, 22))
-        def update_label():
-            self.label_question_11.setText(str(self.question_11_Slider.value()))
-        self.question_11_Slider.valueChanged.connect(update_label)
-        self.question_11_Slider.setRange(0, 10)
+        # 眼睛乾澀頻率
+        for i, x in enumerate(x_positions, 1):  
+            question_button9 = QtWidgets.QRadioButton(self.page_7)
+            question_button9.setGeometry(QtCore.QRect(x, y_position3, 161, 22))
+            question_button9.setObjectName(f"question_button9_{i}")
+            self.temp_button9.append(question_button9)
+            self.question_button_group9.addButton(question_button9, i)  # 指定ID
+
+        # 頭痛暈眩頻率
+        for i, x in enumerate(x_positions, 1):  
+            question_button10 = QtWidgets.QRadioButton(self.page_7)
+            question_button10.setGeometry(QtCore.QRect(x, y_position4, 161, 22))
+            question_button10.setObjectName(f"question_button10_{i}")
+            self.temp_button10.append(question_button10)
+            self.question_button_group10.addButton(question_button10, i)  # 指定ID
+
+        # 眼睛疲勞頻率
+        for i, x in enumerate(x_positions, 1):  
+            question_button11 = QtWidgets.QRadioButton(self.page_7)
+            question_button11.setGeometry(QtCore.QRect(x, y_position5, 161, 22))
+            question_button11.setObjectName(f"question_button11_{i}")
+            self.temp_button11.append(question_button11)
+            self.question_button_group11.addButton(question_button11, i)  # 指定ID
+
 
         #「問題12」標籤
         self.question_12_label = QtWidgets.QLabel(self.page_7)
@@ -1631,6 +2183,141 @@ class Ui_MainWindow(object):
 
 
         self.stackedWidget.addWidget(self.page_7)
+        
+        
+        self.page_8 = QtWidgets.QWidget()
+        self.page_8.setObjectName("page_8")
+        #「使用者說明」大標籤
+        self.introduction_title_label = QtWidgets.QLabel(self.page_8)
+        self.introduction_title_label.setGeometry(QtCore.QRect(415, 25, 291, 51))
+        font = QtGui.QFont()
+        font.setPointSize(36)
+        self.introduction_title_label.setFont(font)
+        self.introduction_title_label.setAlignment(QtCore.Qt.AlignCenter)
+        self.introduction_title_label.setObjectName("introduction_title_label")
+        # 兩條線
+        self.line_1 = QtWidgets.QFrame(self.page_8)
+        self.line_1.setGeometry(QtCore.QRect(35, 95, 1001, 20))  # 向上10
+        self.line_1.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line_1.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_1.setObjectName("line_1")
+
+        self.line_2 = QtWidgets.QFrame(self.page_8)
+        self.line_2.setGeometry(QtCore.QRect(35, 525, 1001, 20))  # 向上10
+        self.line_2.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line_2.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_2.setObjectName("line_2")
+
+        # 數字1標籤
+        self.number1_label = QtWidgets.QLabel(self.page_8)
+        self.number1_label.setGeometry(QtCore.QRect(195, 135, 41, 61))  # 向上10
+        font = QtGui.QFont()
+        font.setPointSize(36)
+        self.number1_label.setFont(font)
+        self.number1_label.setObjectName("number1_label")
+
+        # 數字2標籤
+        self.number2_label = QtWidgets.QLabel(self.page_8)
+        self.number2_label.setGeometry(QtCore.QRect(195, 245, 41, 61))  # 向上10
+        font = QtGui.QFont()
+        font.setPointSize(36)
+        self.number2_label.setFont(font)
+        self.number2_label.setObjectName("number2_label")
+
+        # 數字3標籤
+        self.number3_label = QtWidgets.QLabel(self.page_8)
+        self.number3_label.setGeometry(QtCore.QRect(195, 355, 41, 61))  # 向上10
+        font = QtGui.QFont()
+        font.setPointSize(36)
+        self.number3_label.setFont(font)
+        self.number3_label.setObjectName("number3_label")
+
+        # 數字4標籤
+        self.number4_label = QtWidgets.QLabel(self.page_8)
+        self.number4_label.setGeometry(QtCore.QRect(195, 455, 41, 61))  # 向上10
+        font = QtGui.QFont()
+        font.setPointSize(36)
+        self.number4_label.setFont(font)
+        self.number4_label.setObjectName("number4_label")
+
+        # 第一句上行
+        self.description1_1_label = QtWidgets.QLabel(self.page_8)
+        self.description1_1_label.setGeometry(QtCore.QRect(235, 145, 721, 31))  # 向上10
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.description1_1_label.setFont(font)
+        self.description1_1_label.setObjectName("description1_1_label")
+
+        # 第一句下行
+        self.description1_2_label = QtWidgets.QLabel(self.page_8)
+        self.description1_2_label.setGeometry(QtCore.QRect(235, 185, 721, 31))  # 向上10
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.description1_2_label.setFont(font)
+        self.description1_2_label.setObjectName("description1_2_label")
+
+        # 第二句上行
+        self.description2_1_label = QtWidgets.QLabel(self.page_8)
+        self.description2_1_label.setGeometry(QtCore.QRect(235, 255, 731, 16))  # 向上10
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.description2_1_label.setFont(font)
+        self.description2_1_label.setObjectName("description2_1_label")
+
+        # 第二句下行
+        self.description2_2_label = QtWidgets.QLabel(self.page_8)
+        self.description2_2_label.setGeometry(QtCore.QRect(235, 295, 701, 16))  # 向上10
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.description2_2_label.setFont(font)
+        self.description2_2_label.setObjectName("description2_2_label")
+
+        # 第三句上行
+        self.description3_1_label = QtWidgets.QLabel(self.page_8)
+        self.description3_1_label.setGeometry(QtCore.QRect(235, 375, 681, 21))  # 向上10
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.description3_1_label.setFont(font)
+        self.description3_1_label.setObjectName("description3_1_label")
+
+        # 第三句下行
+        self.description3_2_label = QtWidgets.QLabel(self.page_8)
+        self.description3_2_label.setGeometry(QtCore.QRect(235, 405, 671, 21))  # 向上10
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.description3_2_label.setFont(font)
+        self.description3_2_label.setObjectName("description3_2_label")
+
+        # 第四句
+        self.description4_1_label = QtWidgets.QLabel(self.page_8)
+        self.description4_1_label.setGeometry(QtCore.QRect(235, 485, 681, 21))  # 向上10
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.description4_1_label.setFont(font)
+        self.description4_1_label.setObjectName("description4_1_label")
+
+        # 「送出」按鈕  
+        self.introduction_send_pushButton = QtWidgets.QPushButton(self.page_8)
+        self.introduction_send_pushButton.setGeometry(QtCore.QRect(475, 605, 181, 31))  # 向上10
+        self.introduction_send_pushButton.setObjectName("introduction_send_pushButton")
+
+        # 「我已知悉使用條款」按鈕
+        self.introduction_agree_radioButton = QtWidgets.QRadioButton(self.page_8)
+        self.introduction_agree_radioButton.setGeometry(QtCore.QRect(425, 565, 281, 20))  # 向上10
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.introduction_agree_radioButton.setFont(font)
+        self.introduction_agree_radioButton.setObjectName("introduction_agree_radioButton")
+
+
+
+        
+        self.stackedWidget.addWidget(self.page_8)
+        
+        
+        
+        
+        
 
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -1697,17 +2384,23 @@ class Ui_MainWindow(object):
         self.right_eye_label.setText(_translate("MainWindow", "右眼："))
         self.right_eye_out_button.setText(_translate("MainWindow", "遠視"))
         self.right_eye_in_button.setText(_translate("MainWindow", "近視"))
-        self.right_eye_shine_button.setText(_translate("MainWindow", "閃光"))
+        self.right_eye_shine_button.setText(_translate("MainWindow", "散光"))
         self.left_eye_label.setText(_translate("MainWindow", "左眼："))
         self.left_eye_out_button.setText(_translate("MainWindow", "遠視"))
         self.left_eye_in_button.setText(_translate("MainWindow", "近視"))
-        self.left_eye_shine_button.setText(_translate("MainWindow", "閃光"))
+        self.left_eye_shine_button.setText(_translate("MainWindow", "散光"))
+        self.eye_situation_upnumber_label.setText(_translate("MainWindow", "1     2     3    4     5     6    7     8     9    10"))
+        self.use_situation_upnumber_label.setText(_translate("MainWindow", "1     2     3    4     5     6    7     8     9    10"))
         self.eye_situation_label1.setText(_translate("MainWindow", "您使用電子產品時配戴「眼鏡」的頻率："))
         self.eye_situation_label2.setText(_translate("MainWindow", "您使用電子產品時配戴「隱眼」的頻率："))
         self.eye_situation_label4.setText(_translate("MainWindow", "頭痛暈眩頻率："))
         self.eye_situation_label3.setText(_translate("MainWindow", "眼睛乾澀頻率："))
         self.eye_situation_label5.setText(_translate("MainWindow", "眼睛疲勞頻率："))
         self.use_situation_label5.setText(_translate("MainWindow", "您工作或學習場所之光線情況為："))
+        self.use_situation5_combobox.setItemText(0, _translate("MainWindow", "室內共用燈光"))
+        self.use_situation5_combobox.setItemText(1, _translate("MainWindow", "室內專屬燈光"))
+        self.use_situation5_combobox.setItemText(2, _translate("MainWindow", "室外自然光"))
+        self.use_situation5_combobox.setItemText(3, _translate("MainWindow", "以上皆無"))
         self.habit_label2.setText(_translate("MainWindow", "您定期檢查眼睛的頻率？"))
         self.use_situation_no_button1.setText(_translate("MainWindow", "否"))
         self.use_situation_label2.setText(_translate("MainWindow", "每次使用電子設備時間（以長時間活動為主）？"))
@@ -1757,14 +2450,88 @@ class Ui_MainWindow(object):
         self.habit_exercise_checkbox7.setText(_translate("MainWindow", "眼部運動"))
         self.habit_other_checkbox7.setText(_translate("MainWindow", "其他"))
         self.Savefile.setText(_translate("MainWindow", "Save"))
-        self.Change_detail.setText(_translate("MainWindow", "修改"))
-        self.User_1.setText(_translate("MainWindow", "Mandy"))
-        self.Edit_title.setText(_translate("MainWindow", "選擇使用者"))
-        self.User_2.setText(_translate("MainWindow", "Ryan"))
-        self.User_3.setText(_translate("MainWindow", "Lin"))
-        self.User_4.setText(_translate("MainWindow", "Joy"))
-        self.User_5.setText(_translate("MainWindow", "Bun"))
-        self.Delete.setText(_translate("MainWindow", "刪除"))
+        #以上為註冊介面
+
+
+        #以下為編輯介面
+        self.name_label3_edit.setText(_translate("MainWindow", "姓           名："))
+        self.sex_man_button_edit.setText(_translate("MainWindow", "男生"))
+        self.user_name_label_edit.setText(_translate("MainWindow", "使用者名稱："))
+        self.birthday_label_edit.setText(_translate("MainWindow", "生           日："))
+        self.sex_label_edit.setText(_translate("MainWindow", "性           別："))
+        self.sex_women_button_edit.setText(_translate("MainWindow", "女生"))
+        self.line_token_label_edit.setText(_translate("MainWindow", "line  token ："))
+        self.right_eye_label_edit.setText(_translate("MainWindow", "右眼："))
+        self.right_eye_out_button_edit.setText(_translate("MainWindow", "遠視"))
+        self.right_eye_in_button_edit.setText(_translate("MainWindow", "近視"))
+        self.right_eye_shine_button_edit.setText(_translate("MainWindow", "散光"))
+        self.left_eye_label_edit.setText(_translate("MainWindow", "左眼："))
+        self.left_eye_out_button_edit.setText(_translate("MainWindow", "遠視"))
+        self.left_eye_in_button_edit.setText(_translate("MainWindow", "近視"))
+        self.left_eye_shine_button_edit.setText(_translate("MainWindow", "散光"))
+        self.eye_situation_label1_edit.setText(_translate("MainWindow", "您使用電子產品時配戴「眼鏡」的頻率："))
+        self.eye_situation_label2_edit.setText(_translate("MainWindow", "您使用電子產品時配戴「隱眼」的頻率："))
+        self.eye_situation_label4_edit.setText(_translate("MainWindow", "頭痛暈眩頻率："))
+        self.eye_situation_label3_edit.setText(_translate("MainWindow", "眼睛乾澀頻率："))
+        self.eye_situation_label5_edit.setText(_translate("MainWindow", "眼睛疲勞頻率："))
+        self.use_situation_label5_edit.setText(_translate("MainWindow", "您工作或學習場所之光線情況為："))
+        self.use_situation5_combobox_edit.setItemText(0, _translate("MainWindow", "室內共用燈光"))
+        self.use_situation5_combobox_edit.setItemText(1, _translate("MainWindow", "室內專屬燈光"))
+        self.use_situation5_combobox_edit.setItemText(2, _translate("MainWindow", "室外自然光"))
+        self.use_situation5_combobox_edit.setItemText(3, _translate("MainWindow", "以上皆無"))
+        self.habit_label2_edit.setText(_translate("MainWindow", "您定期檢查眼睛的頻率？"))
+        self.use_situation_no_button1_edit.setText(_translate("MainWindow", "否"))
+        self.use_situation_label2_edit.setText(_translate("MainWindow", "每次使用電子設備時間（以長時間活動為主）？"))
+        self.use_situation_yes_button3_edit.setText(_translate("MainWindow", "是"))
+        self.habit_no_button1_edit.setText(_translate("MainWindow", "否"))
+        self.habit_yes_button1_edit.setText(_translate("MainWindow", "是"))
+        self.use_situation_label3_edit.setText(_translate("MainWindow", "您是否有使用眼睛保護設備(如防藍光設備軟體)？"))
+        self.habit_combobox2_edit.setItemText(0, _translate("MainWindow", "無"))
+        self.habit_combobox2_edit.setItemText(1, _translate("MainWindow", "半年一次"))
+        self.habit_combobox2_edit.setItemText(2, _translate("MainWindow", "一年一次"))
+        self.habit_combobox2_edit.setItemText(3, _translate("MainWindow", "更頻繁"))
+        self.use_situation_label4_edit.setText(_translate("MainWindow", "您使用裝置期間調整顯示器設置頻率："))
+        self.use_situation2_combobox_edit.setItemText(0, _translate("MainWindow", "3小時以內"))
+        self.use_situation2_combobox_edit.setItemText(1, _translate("MainWindow", "3至6小時"))
+        self.use_situation2_combobox_edit.setItemText(2, _translate("MainWindow", "6至9小時"))
+        self.use_situation2_combobox_edit.setItemText(3, _translate("MainWindow", "9至12小時"))
+        self.use_situation2_combobox_edit.setItemText(4, _translate("MainWindow", "12小時以上"))
+        self.use_situation_yes_button1_edit.setText(_translate("MainWindow", "是"))
+        self.use_situation_label1_edit.setText(_translate("MainWindow", "您工作/學習性質是否需要長時間使用電子產品？"))
+        self.habit_label1_edit.setText(_translate("MainWindow", "您平常是否有在時用戶眼保健食品？"))
+        self.use_situation_no_button3_edit.setText(_translate("MainWindow", "否"))
+        self.habit_label3_edit.setText(_translate("MainWindow", "您平均每天睡眠時長為？"))
+        self.habit_combobox3_edit.setItemText(0, _translate("MainWindow", "低於4小時"))
+        self.habit_combobox3_edit.setItemText(1, _translate("MainWindow", "4至6小時"))
+        self.habit_combobox3_edit.setItemText(2, _translate("MainWindow", "6至8小時"))
+        self.habit_combobox3_edit.setItemText(3, _translate("MainWindow", "高於8小時"))
+        self.habit_label4_edit.setText(_translate("MainWindow", "您平均每週運動次數為？"))
+        self.habit_combobox4_edit.setItemText(0, _translate("MainWindow", "0或1次"))
+        self.habit_combobox4_edit.setItemText(1, _translate("MainWindow", "2或3次"))
+        self.habit_combobox4_edit.setItemText(2, _translate("MainWindow", "4或5次"))
+        self.habit_combobox4_edit.setItemText(3, _translate("MainWindow", "6次以上"))
+        self.habit_combobox5_edit.setItemText(0, _translate("MainWindow", "無休息"))
+        self.habit_combobox5_edit.setItemText(1, _translate("MainWindow", "1小時內"))
+        self.habit_combobox5_edit.setItemText(2, _translate("MainWindow", "1至2小時"))
+        self.habit_combobox5_edit.setItemText(3, _translate("MainWindow", "2至3小時"))
+        self.habit_combobox5_edit.setItemText(4, _translate("MainWindow", "3至4小時"))
+        self.habit_combobox5_edit.setItemText(5, _translate("MainWindow", "4至5小時"))
+        self.habit_combobox5_edit.setItemText(6, _translate("MainWindow", "5小時以上"))
+        self.habit_label5_edit.setText(_translate("MainWindow", "使用電子設備時，您通常使用多久會休息？"))
+        self.habit_label6_edit.setText(_translate("MainWindow", "平均每次休息的持續時間約持續多久？"))
+        self.habit_combobox6_edit.setItemText(0, _translate("MainWindow", "10分鐘內"))
+        self.habit_combobox6_edit.setItemText(1, _translate("MainWindow", "11至30分鐘"))
+        self.habit_combobox6_edit.setItemText(2, _translate("MainWindow", "31至60分鐘"))
+        self.habit_combobox6_edit.setItemText(3, _translate("MainWindow", "60分鐘以上"))
+        self.habit_close_checkbox7_edit.setText(_translate("MainWindow", "閉目養神"))
+        self.habit_label7_edit.setText(_translate("MainWindow", "您眼睛疲勞時，習慣的休息方式為何？"))
+        self.habit_exercise_checkbox7_edit.setText(_translate("MainWindow", "眼部運動"))
+        self.habit_other_checkbox7_edit.setText(_translate("MainWindow", "其他"))
+        self.Savefile_edit.setText(_translate("MainWindow", "Save"))
+        self.deletefile_edit.setText(_translate("MainWindow", "刪除"))
+        self.eye_situation_upnumber_label_edit.setText(_translate("MainWindow", "1     2     3    4     5     6    7     8     9    10"))
+        self.use_situation_upnumber_label_edit.setText(_translate("MainWindow", "1     2     3    4     5     6    7     8     9    10"))
+
 
         self.Sendout_Button.setText(_translate("MainWindow", "送出"))
         self.top_label.setText(_translate("MainWindow", "本問卷旨在了解您在使用電子產品時的用眼狀況，以便我們的系統能夠更好地為您提供客制化的用眼健康提醒。\n"
@@ -1806,6 +2573,21 @@ class Ui_MainWindow(object):
         self.question_12_label.setText(_translate("MainWindow", "備註/問題/是否有其他變因"))
         self.question_11_label.setText(_translate("MainWindow", "此次紀錄時，關於\"休息\"的提醒是否準確？"))
         self.question_10_label.setText(_translate("MainWindow", "此次紀錄時，關於\"亮度\"的提醒是否準確？"))
+        #以下為page_8，使用者說明同意介面
+        self.description1_1_label.setText(_translate("MainWindow", "本系統將收集並分析使用者的基本資料及用眼數據，該數據僅用於學術研究及系統優化。"))
+        self.description3_2_label.setText(_translate("MainWindow", "這將有助於我們進一步優化系統，提供更精確的健康建議。"))
+        self.description2_1_label.setText(_translate("MainWindow", "本系統所提供的用眼建議與提醒僅供參考，旨在協助使用者改善用眼習慣，並減少眼睛疲勞。"))
+        self.description1_2_label.setText(_translate("MainWindow", "所有收集的個人資料將受到嚴格保密，並不會用於其他商業目的或外洩。"))
+        self.number1_label.setText(_translate("MainWindow", "1."))
+        self.introduction_title_label.setText(_translate("MainWindow", "使用者說明"))
+        self.number2_label.setText(_translate("MainWindow", "2."))
+        self.number3_label.setText(_translate("MainWindow", "3."))
+        self.description2_2_label.setText(_translate("MainWindow", "對於任何嚴重的眼部健康問題，請務必諮詢專業醫療人員。"))
+        self.description3_1_label.setText(_translate("MainWindow", "每次測試結束後，請務必填寫系統提供的簡易問卷，以回饋您的用眼感受及身體狀況。"))
+        self.introduction_send_pushButton.setText(_translate("MainWindow", "送出"))
+        self.number4_label.setText(_translate("MainWindow", "4."))
+        self.description4_1_label.setText(_translate("MainWindow", "測驗期間，請確保網路連接順暢，以避免數據上傳失敗。"))
+        self.introduction_agree_radioButton.setText(_translate("MainWindow", "本人已閱讀並同意相關服務條款"))
 
 
 
