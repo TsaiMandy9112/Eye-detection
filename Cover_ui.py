@@ -15,27 +15,16 @@ class Ui_MainWindow(object):
         self.page_1 = QtWidgets.QWidget()
         self.page_1.setAutoFillBackground(False)
         self.page_1.setObjectName("page_1")
-
-        self.label_title = QtWidgets.QLabel(self.page_1)
-        self.label_title.setGeometry(QtCore.QRect(390, 130, 591, 101))
-        font = QtGui.QFont()
-        font.setFamily("Arial Black")
-        font.setPointSize(48)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_title.setFont(font)
-        self.label_title.setObjectName("label_title")
-
-        self.label_notice = QtWidgets.QLabel(self.page_1)
-        self.label_notice.setGeometry(QtCore.QRect(260, 290, 611, 191))
-        font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setPointSize(16)
-        self.label_notice.setFont(font)
-        self.label_notice.setObjectName("label_notice")
+        
+        # 創建一個 QLabel 用於顯示圖片
+        self.firstpage_picture_label = QtWidgets.QLabel(self.page_1)
+        self.firstpage_picture_label.setGeometry(0, 0, 1108, 670)  # 直接設置尺寸
+        self.firstpage_picture_label.setScaledContents(True)  # 讓圖片自動縮放
+        #self.firstpage_picture_label.setPixmap(QtGui.QPixmap("https://drive.google.com/uc?id=1Y_709FXJCeCi3QbS5-um3-dCBn5vc3i").scaled(1108, 670, QtCore.Qt.IgnoreAspectRatio))
+        self.firstpage_picture_label.setAlignment(QtCore.Qt.AlignCenter)
 
         self.login = QtWidgets.QToolButton(self.page_1)
-        self.login.setGeometry(QtCore.QRect(480, 510, 141, 61))
+        self.login.setGeometry(QtCore.QRect(433, 448, 234, 53))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(16)
@@ -43,41 +32,95 @@ class Ui_MainWindow(object):
         font.setWeight(50)
         self.login.setFont(font)
         self.login.setAutoRaise(False)
+        self.login.setStyleSheet("""
+                                    background-color: transparent; 
+                                    color: transparent; 
+                                    border: none;
+                                """)        
         self.login.setObjectName("login")
 
         self.Signup = QtWidgets.QPushButton(self.page_1)
-        self.Signup.setGeometry(QtCore.QRect(1000, 310, 101, 41))
+        self.Signup.setGeometry(QtCore.QRect(715, 100, 70, 85))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(16)
         font.setBold(True)
         font.setWeight(75)
         self.Signup.setFont(font)
+        self.Signup.setStyleSheet("""
+                                    QPushButton {
+                                        background-color: transparent; 
+                                        color: transparent; 
+                                        border: none;
+                                    }
+                                    QPushButton:hover {
+                                        color: #32466A;  /* 當鼠標懸停時顯示文字 */
+                                        padding-top: 65px;    /* 向下偏移文字位置 */
+                                        text-align: center;    /* 文字對齊方式，可選 left, right, center */
+                                    }
+                                """)
         self.Signup.setObjectName("Signup")
+        
+        
+        
+        
+        
+        
 
         self.Edit = QtWidgets.QPushButton(self.page_1)
-        self.Edit.setGeometry(QtCore.QRect(1000, 370, 101, 41))
+        self.Edit.setGeometry(QtCore.QRect(788, 105, 70, 85))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(16)
         font.setBold(True)
         font.setWeight(75)
         self.Edit.setFont(font)
+        self.Edit.setStyleSheet("""
+                                    QPushButton {
+                                        background-color: transparent; 
+                                        color: transparent; 
+                                        border: none;
+                                    }
+                                    QPushButton:hover {
+                                        color: #32466A;  /* 當鼠標懸停時顯示文字 */
+                                        padding-top: 60px;    /* 向下偏移文字位置 */
+                                        text-align: center;    /* 文字對齊方式，可選 left, right, center */
+                                    }
+                                """)
         self.Edit.setObjectName("Edit")
 
         self.Analysis = QtWidgets.QPushButton(self.page_1)
-        self.Analysis.setGeometry(QtCore.QRect(1000, 430, 101, 41))
+        self.Analysis.setGeometry(QtCore.QRect(861, 105, 70, 85))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(16)
         font.setBold(True)
         font.setWeight(75)
         self.Analysis.setFont(font)
+        self.Analysis.setStyleSheet("""
+                                    QPushButton {
+                                        background-color: transparent; 
+                                        color: transparent; 
+                                        border: none;
+                                    }
+                                    QPushButton:hover {
+                                        color: #32466A;  /* 當鼠標懸停時顯示文字 */
+                                        padding-top: 60px;    /* 向下偏移文字位置 */
+                                        text-align: center;    /* 文字對齊方式，可選 left, right, center */
+                                    }
+                                """)        
         self.Analysis.setObjectName("Analysis")
 
         self.stackedWidget.addWidget(self.page_1)
         self.page_2 = QtWidgets.QWidget()
         self.page_2.setObjectName("page_2")
+
+        # 創建一個 QLabel 用於顯示圖片
+        self.secondpage_picture_label_2 = QtWidgets.QLabel(self.page_2)
+        self.secondpage_picture_label_2.setGeometry(0, 0, 1108, 670)  # 直接設置尺寸
+        self.secondpage_picture_label_2.setScaledContents(True)  # 讓圖片自動縮放
+        #self.secondpage_picture_label_2.setPixmap(QtGui.QPixmap("/Users/bunnnn1002/eye_myself/所有檔案/底圖_3.png").scaled(1108, 670, QtCore.Qt.IgnoreAspectRatio))
+        self.secondpage_picture_label_2.setAlignment(QtCore.Qt.AlignCenter)
 
         self.camera_site = QtWidgets.QLabel(self.page_2)
         self.camera_site.setGeometry(QtCore.QRect(30, 40, 701, 581))
@@ -381,15 +424,29 @@ class Ui_MainWindow(object):
         self.login1_homebutton = QtWidgets.QPushButton(self.page_2)
         self.login1_homebutton.setGeometry(QtCore.QRect(1060, 10, 31, 31))
         self.login1_homebutton.setText("")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("home_photo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.login1_homebutton.setIcon(icon)
-        self.login1_homebutton.setIconSize(QtCore.QSize(30,30))
+        #icon = QtGui.QIcon()
+        #icon.addPixmap(QtGui.QPixmap("/Users/bunnnn1002/eye_myself/所有檔案/home-removebg-preview.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        #self.login1_homebutton.setIcon(icon)
+        #self.login1_homebutton.setIconSize(QtCore.QSize(30,30))
         self.login1_homebutton.setObjectName("login1_homebutton")
+               # 設置樣式，讓按鈕背景透明並移除邊框
+        self.login1_homebutton.setStyleSheet("""
+            QPushButton {
+                background-color: transparent;  /* 背景透明 */
+                border: none;                  /* 無邊框 */
+            }
+        """)
         
         self.stackedWidget.addWidget(self.page_2)
         self.page_3 = QtWidgets.QWidget()
         self.page_3.setObjectName("page_3")
+
+        # 創建一個 QLabel 用於顯示圖片
+        self.secondpage_picture_label_3 = QtWidgets.QLabel(self.page_3)
+        self.secondpage_picture_label_3.setGeometry(0, 0, 1108, 670)  # 直接設置尺寸
+        self.secondpage_picture_label_3.setScaledContents(True)  # 讓圖片自動縮放
+        #self.secondpage_picture_label_3.setPixmap(QtGui.QPixmap("/Users/bunnnn1002/eye_myself/所有檔案/底圖_3.png").scaled(1108, 670, QtCore.Qt.IgnoreAspectRatio))
+        self.secondpage_picture_label_3.setAlignment(QtCore.Qt.AlignCenter)
 
         self.camera_site_2 = QtWidgets.QLabel(self.page_3)
         self.camera_site_2.setGeometry(QtCore.QRect(30, 40, 701, 581))
@@ -652,15 +709,29 @@ class Ui_MainWindow(object):
         self.login2_homebutton = QtWidgets.QPushButton(self.page_3)
         self.login2_homebutton.setGeometry(QtCore.QRect(1060, 10, 31, 31))
         self.login2_homebutton.setText("")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("home_photo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.login2_homebutton.setIcon(icon)
-        self.login2_homebutton.setIconSize(QtCore.QSize(30,30))
+        #icon = QtGui.QIcon()
+        #icon.addPixmap(QtGui.QPixmap("/Users/bunnnn1002/eye_myself/所有檔案/home-removebg-preview.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        #self.login2_homebutton.setIcon(icon)
+        #self.login2_homebutton.setIconSize(QtCore.QSize(30,30))
         self.login2_homebutton.setObjectName("login2_homebutton")
+               # 設置樣式，讓按鈕背景透明並移除邊框
+        self.login2_homebutton.setStyleSheet("""
+            QPushButton {
+                background-color: transparent;  /* 背景透明 */
+                border: none;                  /* 無邊框 */
+            }
+        """)
 
         self.stackedWidget.addWidget(self.page_3)
         self.page_4 = QtWidgets.QWidget()
         self.page_4.setObjectName("page_4")
+        
+        # 創建一個 QLabel 用於顯示圖片
+        self.secondpage_picture_label_4 = QtWidgets.QLabel(self.page_4)
+        self.secondpage_picture_label_4.setGeometry(0, 0, 1108, 670)  # 直接設置尺寸
+        self.secondpage_picture_label_4.setScaledContents(True)  # 讓圖片自動縮放
+        #self.secondpage_picture_label_4.setPixmap(QtGui.QPixmap("/Users/bunnnn1002/eye_myself/所有檔案/底圖_3.png").scaled(1108, 670, QtCore.Qt.IgnoreAspectRatio))
+        self.secondpage_picture_label_4.setAlignment(QtCore.Qt.AlignCenter)
 
         self.label = QtWidgets.QLabel(self.page_4)
         self.label.setGeometry(QtCore.QRect(500, 60, 171, 51))
@@ -727,17 +798,31 @@ class Ui_MainWindow(object):
         self.analysis_homebutton = QtWidgets.QPushButton(self.page_4)
         self.analysis_homebutton.setGeometry(QtCore.QRect(1060, 10, 31, 31))
         self.analysis_homebutton.setText("")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("home_photo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.analysis_homebutton.setIcon(icon)
-        self.analysis_homebutton.setIconSize(QtCore.QSize(30,30))
+        #icon = QtGui.QIcon()
+        #icon.addPixmap(QtGui.QPixmap("/Users/bunnnn1002/eye_myself/所有檔案/home-removebg-preview.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        #self.analysis_homebutton.setIcon(icon)
+        #self.analysis_homebutton.setIconSize(QtCore.QSize(30,30))
         self.analysis_homebutton.setObjectName("analysis_homebutton")
+               # 設置樣式，讓按鈕背景透明並移除邊框
+        self.analysis_homebutton.setStyleSheet("""
+            QPushButton {
+                background-color: transparent;  /* 背景透明 */
+                border: none;                  /* 無邊框 */
+            }
+        """)
 
         self.stackedWidget.addWidget(self.page_4)
 
         self.page_5 = QtWidgets.QWidget()
         self.page_5.setObjectName("page_5")
-
+        
+        # 創建一個 QLabel 用於顯示圖片
+        self.secondpage_picture_label_5 = QtWidgets.QLabel(self.page_5)
+        self.secondpage_picture_label_5.setGeometry(0, 0, 1108, 670)  # 直接設置尺寸
+        self.secondpage_picture_label_5.setScaledContents(True)  # 讓圖片自動縮放
+        #self.secondpage_picture_label_5.setPixmap(QtGui.QPixmap("/Users/bunnnn1002/eye_myself/所有檔案/底圖_3.png").scaled(1108, 670, QtCore.Qt.IgnoreAspectRatio))
+        self.secondpage_picture_label_5.setAlignment(QtCore.Qt.AlignCenter)
+        
         #「姓名」標籤
         self.name_label3 = QtWidgets.QLabel(self.page_5)
         self.name_label3.setGeometry(QtCore.QRect(40, 45, 81, 16))
@@ -875,6 +960,8 @@ class Ui_MainWindow(object):
         # 「右眼」閃光總按鈕
         self.right_eye_shine_group = QtWidgets.QButtonGroup(self.page_5)
         self.right_eye_shine_group.addButton(self.right_eye_shine_button)
+        
+        
 
         #「右眼閃光」輸入匡
         self.right_eye_shine_input = QtWidgets.QLineEdit(self.page_5)
@@ -921,6 +1008,7 @@ class Ui_MainWindow(object):
         self.left_eye_shine_button = QtWidgets.QRadioButton(self.page_5)
         self.left_eye_shine_button.setGeometry(QtCore.QRect(85, 265, 51, 20))
         self.left_eye_shine_button.setObjectName("left_eye_shine_button")
+        
 
         # 「左眼」閃光總按鈕
         self.left_eye_shine_group = QtWidgets.QButtonGroup(self.page_5)
@@ -1104,14 +1192,7 @@ class Ui_MainWindow(object):
         self.use_situation3_group.addButton(self.use_situation_yes_button3)
         self.use_situation3_group.addButton(self.use_situation_no_button3)
 
-        '''右上角的兩個1-10問題'''
-        #點擊程度的上排數字標籤
-        self.use_situation_upnumber_label = QtWidgets.QLabel(self.page_5)
-        self.use_situation_upnumber_label.setGeometry(QtCore.QRect(815, 189, 200, 15))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.use_situation_upnumber_label.setFont(font)
-        self.use_situation_upnumber_label.setObjectName("use_situation_upnumber_label")
+        
         #「調整顯示器頻率」（電子產品狀況4）標籤
         self.use_situation_label4 = QtWidgets.QLabel(self.page_5)
         self.use_situation_label4.setGeometry(QtCore.QRect(560, 200, 241, 16))
@@ -1119,6 +1200,16 @@ class Ui_MainWindow(object):
         font.setPointSize(14)
         self.use_situation_label4.setFont(font)
         self.use_situation_label4.setObjectName("use_situation_label4")
+        
+        self.use_situation4_combobox = QtWidgets.QComboBox(self.page_5)
+        self.use_situation4_combobox.setGeometry(QtCore.QRect(870, 200, 121, 26))
+        self.use_situation4_combobox.setObjectName("use_situation4_combobox")
+        self.use_situation4_combobox.addItem("")
+        self.use_situation4_combobox.addItem("")
+        self.use_situation4_combobox.addItem("")
+        
+        
+        
         #「光線情形」（電子產品狀況5）標籤
         self.use_situation_label5 = QtWidgets.QLabel(self.page_5)
         self.use_situation_label5.setGeometry(QtCore.QRect(560, 160, 221, 16))
@@ -1127,12 +1218,6 @@ class Ui_MainWindow(object):
         self.use_situation_label5.setFont(font)
         self.use_situation_label5.setObjectName("use_situation_label5")
        
-        # 創建 QButtonGroup 並將按鈕加入組
-        self.use_situation_button_group4 = QtWidgets.QButtonGroup(self.page_5)  
-        self.temp_button2 = []  
-        x_positions = [810, 829, 848, 867, 887, 907, 926, 947, 968, 990]  
-        y_position2 = 202  
-
         self.use_situation5_combobox = QtWidgets.QComboBox(self.page_5)
         self.use_situation5_combobox.setGeometry(QtCore.QRect(870, 160, 121, 26))
         self.use_situation5_combobox.setObjectName("use_situation5_combobox")
@@ -1140,14 +1225,9 @@ class Ui_MainWindow(object):
         self.use_situation5_combobox.addItem("")
         self.use_situation5_combobox.addItem("")
         self.use_situation5_combobox.addItem("")
-        # 為第5組生成按鈕
-        for i, x in enumerate(x_positions, 1):  
-            use_situation_button5 = QtWidgets.QRadioButton(self.page_5)
-            use_situation_button5.setGeometry(QtCore.QRect(x, y_position2, 161, 22))
-            use_situation_button5.setObjectName(f"use_situation_button5_{i}")
-            self.temp_button2.append(use_situation_button5)
-            self.use_situation_button_group4.addButton(use_situation_button5, i)  # 指定每個按鈕的ID
-
+        self.use_situation5_combobox.addItem("")
+        self.use_situation5_combobox.addItem("")
+        
         #「右中」虛線
         self.line_10 = QtWidgets.QFrame(self.page_5)
         self.line_10.setGeometry(QtCore.QRect(550, 230, 441, 20))
@@ -1325,11 +1405,18 @@ class Ui_MainWindow(object):
         self.signup_homebutton = QtWidgets.QPushButton(self.page_5)
         self.signup_homebutton.setGeometry(QtCore.QRect(1060, 10, 31, 31))
         self.signup_homebutton.setText("")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("home_photo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.signup_homebutton.setIcon(icon)
-        self.signup_homebutton.setIconSize(QtCore.QSize(30,30))
+        #icon = QtGui.QIcon()
+        #icon.addPixmap(QtGui.QPixmap("/Users/bunnnn1002/eye_myself/所有檔案/home-removebg-preview.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        #self.signup_homebutton.setIcon(icon)
+        #self.signup_homebutton.setIconSize(QtCore.QSize(30,30))
         self.signup_homebutton.setObjectName("signup_homebutton")
+               # 設置樣式，讓按鈕背景透明並移除邊框
+        self.signup_homebutton.setStyleSheet("""
+            QPushButton {
+                background-color: transparent;  /* 背景透明 */
+                border: none;                  /* 無邊框 */
+            }
+        """)
 
         self.stackedWidget.addWidget(self.page_5)
         
@@ -1339,6 +1426,14 @@ class Ui_MainWindow(object):
         #以下是page_6，編輯的介面
         #以下是page_6，編輯的介面
         #以下是page_6，編輯的介面
+        
+        # 創建一個 QLabel 用於顯示圖片
+        self.secondpage_picture_label_6 = QtWidgets.QLabel(self.page_6)
+        self.secondpage_picture_label_6.setGeometry(0, 0, 1108, 670)  # 直接設置尺寸
+        self.secondpage_picture_label_6.setScaledContents(True)  # 讓圖片自動縮放
+        #self.secondpage_picture_label_6.setPixmap(QtGui.QPixmap("/Users/bunnnn1002/eye_myself/所有檔案/底圖_3.png").scaled(1108, 670, QtCore.Qt.IgnoreAspectRatio))
+        self.secondpage_picture_label_6.setAlignment(QtCore.Qt.AlignCenter)
+        
         #「姓名」標籤
         self.name_label3_edit = QtWidgets.QLabel(self.page_6)
         self.name_label3_edit.setGeometry(QtCore.QRect(40, 45, 81, 16))
@@ -1700,14 +1795,6 @@ class Ui_MainWindow(object):
         self.use_situation3_group_edit.addButton(self.use_situation_yes_button3_edit)
         self.use_situation3_group_edit.addButton(self.use_situation_no_button3_edit)
 
-        '''右上角的兩個1-10問題 '''
-        #點擊程度的上排數字標籤
-        self.use_situation_upnumber_label_edit = QtWidgets.QLabel(self.page_6)
-        self.use_situation_upnumber_label_edit.setGeometry(QtCore.QRect(815, 199, 200, 15))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.use_situation_upnumber_label_edit.setFont(font)
-        self.use_situation_upnumber_label_edit.setObjectName("use_situation_upnumber_label_edit")
         #「調整顯示器頻率」（電子產品狀況4）標籤
         self.use_situation_label4_edit = QtWidgets.QLabel(self.page_6)
         self.use_situation_label4_edit.setGeometry(QtCore.QRect(560, 210, 241, 16))
@@ -1715,6 +1802,14 @@ class Ui_MainWindow(object):
         font.setPointSize(14)
         self.use_situation_label4_edit.setFont(font)
         self.use_situation_label4_edit.setObjectName("use_situation_label4_edit")
+        
+        self.use_situation4_combobox_edit = QtWidgets.QComboBox(self.page_6)
+        self.use_situation4_combobox_edit.setGeometry(QtCore.QRect(870, 210, 121, 26))
+        self.use_situation4_combobox_edit.setObjectName("use_situation4_combobox_edit")
+        self.use_situation4_combobox_edit.addItem("")
+        self.use_situation4_combobox_edit.addItem("")
+        self.use_situation4_combobox_edit.addItem("")
+        
         #「光線情形」（電子產品狀況5）標籤
         self.use_situation_label5_edit = QtWidgets.QLabel(self.page_6)
         self.use_situation_label5_edit.setGeometry(QtCore.QRect(560, 170, 221, 16))
@@ -1723,11 +1818,7 @@ class Ui_MainWindow(object):
         self.use_situation_label5_edit.setFont(font)
         self.use_situation_label5_edit.setObjectName("use_situation_label5_edit")
        
-        # 創建 QButtonGroup 並將按鈕加入組
-        self.use_situation_button_group4_edit = QtWidgets.QButtonGroup(self.page_6)  
-        self.temp_button2_edit = []  
-        x_positions = [810, 829, 848, 867, 887, 907, 926, 947, 968, 990]  
-        y_position2 = 212  
+        
 
         self.use_situation5_combobox_edit = QtWidgets.QComboBox(self.page_6)
         self.use_situation5_combobox_edit.setGeometry(QtCore.QRect(870, 170, 121, 26))
@@ -1736,13 +1827,8 @@ class Ui_MainWindow(object):
         self.use_situation5_combobox_edit.addItem("")
         self.use_situation5_combobox_edit.addItem("")
         self.use_situation5_combobox_edit.addItem("")
-        # 為第5組生成按鈕
-        for i, x in enumerate(x_positions, 1):  
-            use_situation_button5_edit = QtWidgets.QRadioButton(self.page_6)
-            use_situation_button5_edit.setGeometry(QtCore.QRect(x, y_position2, 161, 22))
-            use_situation_button5_edit.setObjectName(f"use_situation_button5_{i}_edit")
-            self.temp_button2_edit.append(use_situation_button5_edit)
-            self.use_situation_button_group4_edit.addButton(use_situation_button5_edit, i)  # 指定每個按鈕的ID
+        self.use_situation5_combobox_edit.addItem("")
+        self.use_situation5_combobox_edit.addItem("")
         
         
 
@@ -1949,16 +2035,31 @@ class Ui_MainWindow(object):
         self.edit1_homebutton = QtWidgets.QPushButton(self.page_6)
         self.edit1_homebutton.setGeometry(QtCore.QRect(1060, 10, 31, 31))
         self.edit1_homebutton.setText("")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("/Users/bunnnn1002/eye_myself/0908周改/home.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.edit1_homebutton.setIcon(icon)
-        self.edit1_homebutton.setIconSize(QtCore.QSize(30,30))
+        #icon = QtGui.QIcon()
+        #icon.addPixmap(QtGui.QPixmap("/Users/bunnnn1002/eye_myself/所有檔案/home-removebg-preview.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        #self.edit1_homebutton.setIcon(icon)
+        #self.edit1_homebutton.setIconSize(QtCore.QSize(30,30))
         self.edit1_homebutton.setObjectName("edit1_homebutton")
+               # 設置樣式，讓按鈕背景透明並移除邊框
+        self.edit1_homebutton.setStyleSheet("""
+            QPushButton {
+                background-color: transparent;  /* 背景透明 */
+                border: none;                  /* 無邊框 */
+            }
+        """)
 
         '''後側介面'''
         self.stackedWidget.addWidget(self.page_6)
         self.page_7 = QtWidgets.QWidget()
         self.page_7.setObjectName("page_7")
+        
+        # 創建一個 QLabel 用於顯示圖片
+        self.secondpage_picture_label_7 = QtWidgets.QLabel(self.page_7)
+        self.secondpage_picture_label_7.setGeometry(0, 0, 1108, 670)  # 直接設置尺寸
+        self.secondpage_picture_label_7.setScaledContents(True)  # 讓圖片自動縮放
+        #self.secondpage_picture_label_7.setPixmap(QtGui.QPixmap("/Users/bunnnn1002/eye_myself/所有檔案/底圖_3.png").scaled(1108, 670, QtCore.Qt.IgnoreAspectRatio))
+        self.secondpage_picture_label_7.setAlignment(QtCore.Qt.AlignCenter)
+        
         #「頂端文字說明」（那一大串的那個）
         self.top_label = QtWidgets.QLabel(self.page_7)
         self.top_label.setEnabled(True)
@@ -2187,6 +2288,14 @@ class Ui_MainWindow(object):
         
         self.page_8 = QtWidgets.QWidget()
         self.page_8.setObjectName("page_8")
+        
+        # 創建一個 QLabel 用於顯示圖片
+        self.secondpage_picture_label_8 = QtWidgets.QLabel(self.page_8)
+        self.secondpage_picture_label_8.setGeometry(0, 0, 1108, 670)  # 直接設置尺寸
+        self.secondpage_picture_label_8.setScaledContents(True)  # 讓圖片自動縮放
+        #self.secondpage_picture_label_8.setPixmap(QtGui.QPixmap("/Users/bunnnn1002/eye_myself/所有檔案/底圖_3.png").scaled(1108, 670, QtCore.Qt.IgnoreAspectRatio))
+        self.secondpage_picture_label_8.setAlignment(QtCore.Qt.AlignCenter)
+        
         #「使用者說明」大標籤
         self.introduction_title_label = QtWidgets.QLabel(self.page_8)
         self.introduction_title_label.setGeometry(QtCore.QRect(415, 25, 291, 51))
@@ -2331,16 +2440,6 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Eye myself"))
-        self.label_title.setText(_translate("MainWindow", "EYE MYSELF"))
-        self.label_notice.setText(_translate("MainWindow", "1.本系統會收集和分析使用者的基本資料與用眼數據，這些數據僅用於學術研究\n"
-"及系統優化。所有收集個人資料將嚴格保密，並不會用於其他商業用途或外洩。\n"
-"\n"
-"2.本系統提供的用眼建議和提醒僅供參考，旨在幫助使用者改善用眼習慣並\n"
-"減少眼睛疲勞。對於任何嚴重的眼部健康問題，請諮詢專業醫療人員。\n"
-"\n"
-"3.每次測試結束後，請務必填寫系統提供的簡易問卷，以反饋您的用眼感受和\n"
-"身體狀況。這將幫助我們進一步優化系統，提供更精確的健康建議。\n"
-""))
         self.login.setText(_translate("MainWindow", "Log in"))
         self.Signup.setText(_translate("MainWindow", "Sign up"))
         self.Edit.setText(_translate("MainWindow", "Edit"))
@@ -2390,17 +2489,18 @@ class Ui_MainWindow(object):
         self.left_eye_in_button.setText(_translate("MainWindow", "近視"))
         self.left_eye_shine_button.setText(_translate("MainWindow", "散光"))
         self.eye_situation_upnumber_label.setText(_translate("MainWindow", "1     2     3    4     5     6    7     8     9    10"))
-        self.use_situation_upnumber_label.setText(_translate("MainWindow", "1     2     3    4     5     6    7     8     9    10"))
         self.eye_situation_label1.setText(_translate("MainWindow", "您使用電子產品時配戴「眼鏡」的頻率："))
         self.eye_situation_label2.setText(_translate("MainWindow", "您使用電子產品時配戴「隱眼」的頻率："))
         self.eye_situation_label4.setText(_translate("MainWindow", "頭痛暈眩頻率："))
         self.eye_situation_label3.setText(_translate("MainWindow", "眼睛乾澀頻率："))
         self.eye_situation_label5.setText(_translate("MainWindow", "眼睛疲勞頻率："))
         self.use_situation_label5.setText(_translate("MainWindow", "您工作或學習場所之光線情況為："))
-        self.use_situation5_combobox.setItemText(0, _translate("MainWindow", "室內共用燈光"))
-        self.use_situation5_combobox.setItemText(1, _translate("MainWindow", "室內專屬燈光"))
-        self.use_situation5_combobox.setItemText(2, _translate("MainWindow", "室外自然光"))
-        self.use_situation5_combobox.setItemText(3, _translate("MainWindow", "以上皆無"))
+        self.use_situation5_combobox.setItemText(0, _translate("MainWindow", "僅室內共用燈光"))
+        self.use_situation5_combobox.setItemText(1, _translate("MainWindow", "僅室內專用燈光"))
+        self.use_situation5_combobox.setItemText(2, _translate("MainWindow", "室內共用與專用燈光皆有"))
+        self.use_situation5_combobox.setItemText(3, _translate("MainWindow", "戶外"))
+        self.use_situation5_combobox.setItemText(4, _translate("MainWindow", "光線明顯不足之環境"))
+        self.use_situation5_combobox.setItemText(5, _translate("MainWindow", "其他"))
         self.habit_label2.setText(_translate("MainWindow", "您定期檢查眼睛的頻率？"))
         self.use_situation_no_button1.setText(_translate("MainWindow", "否"))
         self.use_situation_label2.setText(_translate("MainWindow", "每次使用電子設備時間（以長時間活動為主）？"))
@@ -2412,7 +2512,10 @@ class Ui_MainWindow(object):
         self.habit_combobox2.setItemText(1, _translate("MainWindow", "半年一次"))
         self.habit_combobox2.setItemText(2, _translate("MainWindow", "一年一次"))
         self.habit_combobox2.setItemText(3, _translate("MainWindow", "更頻繁"))
-        self.use_situation_label4.setText(_translate("MainWindow", "您使用裝置期間調整顯示器設置頻率："))
+        self.use_situation_label4.setText(_translate("MainWindow", "您使用裝置期間調整螢幕亮度的頻率："))
+        self.use_situation4_combobox.setItemText(0, _translate("MainWindow", "電腦自動調整"))
+        self.use_situation4_combobox.setItemText(1, _translate("MainWindow", "不常調整"))
+        self.use_situation4_combobox.setItemText(2, _translate("MainWindow", "每次使用都會調整"))
         self.use_situation2_combobox.setItemText(0, _translate("MainWindow", "3小時以內"))
         self.use_situation2_combobox.setItemText(1, _translate("MainWindow", "3至6小時"))
         self.use_situation2_combobox.setItemText(2, _translate("MainWindow", "6至9小時"))
@@ -2420,7 +2523,7 @@ class Ui_MainWindow(object):
         self.use_situation2_combobox.setItemText(4, _translate("MainWindow", "12小時以上"))
         self.use_situation_yes_button1.setText(_translate("MainWindow", "是"))
         self.use_situation_label1.setText(_translate("MainWindow", "您工作/學習性質是否需要長時間使用電子產品？"))
-        self.habit_label1.setText(_translate("MainWindow", "您平常是否有在時用戶眼保健食品？"))
+        self.habit_label1.setText(_translate("MainWindow", "您平常是否有在食用戶眼保健食品？"))
         self.use_situation_no_button3.setText(_translate("MainWindow", "否"))
         self.habit_label3.setText(_translate("MainWindow", "您平均每天睡眠時長為？"))
         self.habit_combobox3.setItemText(0, _translate("MainWindow", "低於4小時"))
@@ -2475,10 +2578,12 @@ class Ui_MainWindow(object):
         self.eye_situation_label3_edit.setText(_translate("MainWindow", "眼睛乾澀頻率："))
         self.eye_situation_label5_edit.setText(_translate("MainWindow", "眼睛疲勞頻率："))
         self.use_situation_label5_edit.setText(_translate("MainWindow", "您工作或學習場所之光線情況為："))
-        self.use_situation5_combobox_edit.setItemText(0, _translate("MainWindow", "室內共用燈光"))
-        self.use_situation5_combobox_edit.setItemText(1, _translate("MainWindow", "室內專屬燈光"))
-        self.use_situation5_combobox_edit.setItemText(2, _translate("MainWindow", "室外自然光"))
-        self.use_situation5_combobox_edit.setItemText(3, _translate("MainWindow", "以上皆無"))
+        self.use_situation5_combobox_edit.setItemText(0, _translate("MainWindow", "僅室內共用燈光"))
+        self.use_situation5_combobox_edit.setItemText(1, _translate("MainWindow", "僅室內專用燈光"))
+        self.use_situation5_combobox_edit.setItemText(2, _translate("MainWindow", "室內共用與專用燈光皆有"))
+        self.use_situation5_combobox_edit.setItemText(3, _translate("MainWindow", "戶外"))
+        self.use_situation5_combobox_edit.setItemText(4, _translate("MainWindow", "光線明顯不足之環境"))
+        self.use_situation5_combobox_edit.setItemText(5, _translate("MainWindow", "其他"))    
         self.habit_label2_edit.setText(_translate("MainWindow", "您定期檢查眼睛的頻率？"))
         self.use_situation_no_button1_edit.setText(_translate("MainWindow", "否"))
         self.use_situation_label2_edit.setText(_translate("MainWindow", "每次使用電子設備時間（以長時間活動為主）？"))
@@ -2490,7 +2595,10 @@ class Ui_MainWindow(object):
         self.habit_combobox2_edit.setItemText(1, _translate("MainWindow", "半年一次"))
         self.habit_combobox2_edit.setItemText(2, _translate("MainWindow", "一年一次"))
         self.habit_combobox2_edit.setItemText(3, _translate("MainWindow", "更頻繁"))
-        self.use_situation_label4_edit.setText(_translate("MainWindow", "您使用裝置期間調整顯示器設置頻率："))
+        self.use_situation_label4_edit.setText(_translate("MainWindow", "您使用裝置期間調整螢幕亮度的頻率："))
+        self.use_situation4_combobox_edit.setItemText(0, _translate("MainWindow", "電腦自動調整"))
+        self.use_situation4_combobox_edit.setItemText(1, _translate("MainWindow", "不常調整"))
+        self.use_situation4_combobox_edit.setItemText(2, _translate("MainWindow", "每次使用都會調整"))
         self.use_situation2_combobox_edit.setItemText(0, _translate("MainWindow", "3小時以內"))
         self.use_situation2_combobox_edit.setItemText(1, _translate("MainWindow", "3至6小時"))
         self.use_situation2_combobox_edit.setItemText(2, _translate("MainWindow", "6至9小時"))
@@ -2498,7 +2606,7 @@ class Ui_MainWindow(object):
         self.use_situation2_combobox_edit.setItemText(4, _translate("MainWindow", "12小時以上"))
         self.use_situation_yes_button1_edit.setText(_translate("MainWindow", "是"))
         self.use_situation_label1_edit.setText(_translate("MainWindow", "您工作/學習性質是否需要長時間使用電子產品？"))
-        self.habit_label1_edit.setText(_translate("MainWindow", "您平常是否有在時用戶眼保健食品？"))
+        self.habit_label1_edit.setText(_translate("MainWindow", "您平常是否有在食用戶眼保健食品？"))
         self.use_situation_no_button3_edit.setText(_translate("MainWindow", "否"))
         self.habit_label3_edit.setText(_translate("MainWindow", "您平均每天睡眠時長為？"))
         self.habit_combobox3_edit.setItemText(0, _translate("MainWindow", "低於4小時"))
@@ -2530,7 +2638,6 @@ class Ui_MainWindow(object):
         self.Savefile_edit.setText(_translate("MainWindow", "Save"))
         self.deletefile_edit.setText(_translate("MainWindow", "刪除"))
         self.eye_situation_upnumber_label_edit.setText(_translate("MainWindow", "1     2     3    4     5     6    7     8     9    10"))
-        self.use_situation_upnumber_label_edit.setText(_translate("MainWindow", "1     2     3    4     5     6    7     8     9    10"))
 
 
         self.Sendout_Button.setText(_translate("MainWindow", "送出"))
