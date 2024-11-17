@@ -23,4 +23,9 @@ Sub-products will become more popular, so we hope this software can play an impo
 
 <img width="1103" alt="截圖 2024-09-16 下午4 56 34" src="https://github.com/user-attachments/assets/baac371c-f00f-4491-9b5a-71d64ca10b52">
 
+The following is a system fatigue detection method：
+![image](https://github.com/user-attachments/assets/5c14048d-2023-4b39-bc9b-9fb8612462d6)
+and system flow chart:
+![流程圖 drawio-2](https://github.com/user-attachments/assets/a983b419-ecbd-4f24-8083-c908bd40cc6f)
+
 reference : https://github.com/htyangs/Eyes-Protector/tree/main
